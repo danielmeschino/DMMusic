@@ -11,14 +11,13 @@
     <link rel="icon" href="img/core-img/favicon.ico">
     <link rel="stylesheet" href="style.css">
 
-    <style>
-        html {
-            scroll-behavior: smooth;
-        }
+    <!-- FONT AWESOME (ICONS) -->
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
-        body {
-            overflow-x: hidden;
-        }
+    <style>
+        html { scroll-behavior: smooth; }
+        body { overflow-x: hidden; }
 
         /* HEADER FIX */
         .header-area,
@@ -28,24 +27,44 @@
             box-shadow: none !important;
         }
 
-        /* BRAND TEXT */
+        /* BRAND */
+        .brand-wrapper {
+            text-align: left;
+        }
+
         a.nav-brand {
-            color: #ffffff !important;
+            color: #fff !important;
             font-size: 28px;
             font-weight: 700;
             letter-spacing: 2px;
             text-transform: uppercase;
+            display: block;
         }
 
-        /* HERO TEXT */
+        /* SOCIAL ICONS */
+        .social-icons {
+            margin-top: 8px;
+            display: flex;
+            gap: 14px;
+        }
+
+        .social-icons a {
+            color: #fff;
+            font-size: 18px;
+            transition: 0.2s ease;
+        }
+
+        .social-icons a:hover {
+            opacity: 0.6;
+            transform: translateY(-2px);
+        }
+
+        /* HERO */
         .hero-area * {
-            color: #ffffff !important;
+            color: #fff !important;
         }
 
-        /* SECTIONS */
-        section {
-            padding: 100px 0;
-        }
+        section { padding: 100px 0; }
 
         .section-title {
             text-align: center;
@@ -65,7 +84,7 @@
             overflow: hidden;
             text-align: center;
             padding-bottom: 15px;
-            transition: transform 0.25s ease, box-shadow 0.25s ease;
+            transition: 0.25s;
         }
 
         .music-card:hover {
@@ -77,7 +96,6 @@
             width: 100%;
             height: 240px;
             object-fit: cover;
-            display: block;
         }
 
         .music-card h5 {
@@ -99,9 +117,7 @@
             opacity: 0.8;
         }
 
-        p {
-            color: #fff;
-        }
+        p { color: #fff; }
     </style>
 </head>
 
@@ -120,8 +136,26 @@
 
                 <nav class="classy-navbar justify-content-between">
 
-                    <a href="#home" class="nav-brand">DANIEL MESCHINO</a>
+                    <!-- BRAND + SOCIALS -->
+                    <div class="brand-wrapper">
+                        <a href="#home" class="nav-brand">DANIEL MESCHINO</a>
 
+                        <div class="social-icons">
+                            <a href="https://instagram.com" target="_blank">
+                                <i class="fa-brands fa-instagram"></i>
+                            </a>
+
+                            <a href="https://open.spotify.com" target="_blank">
+                                <i class="fa-brands fa-spotify"></i>
+                            </a>
+
+                            <a href="https://youtube.com" target="_blank">
+                                <i class="fa-brands fa-youtube"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- MENU -->
                     <div class="classy-navbar-toggler">
                         <span class="navbarToggler"><span></span><span></span><span></span></span>
                     </div>
