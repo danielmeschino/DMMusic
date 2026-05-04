@@ -21,13 +21,12 @@
 
         /* HEADER */
         .header-area,
-        .classy-nav-container,
         .oneMusic-main-menu {
             background: transparent !important;
             box-shadow: none !important;
         }
 
-        a.nav-brand {
+        .nav-brand {
             color: #fff !important;
             font-size: 28px;
             font-weight: 700;
@@ -58,7 +57,7 @@
             transform: translateY(-2px);
         }
 
-        /* HERO */
+        /* HERO TEXT */
         .hero-area * {
             color: #fff !important;
         }
@@ -70,6 +69,7 @@
         .section-title {
             text-align: center;
             margin-bottom: 50px;
+            color: #fff;
         }
 
         /* MUSIC */
@@ -90,7 +90,6 @@
 
         .music-card:hover {
             transform: translateY(-6px);
-            box-shadow: 0 15px 35px rgba(0,0,0,0.4);
         }
 
         .music-card img {
@@ -114,26 +113,46 @@
             text-decoration: none;
         }
 
-        .music-card a:hover {
-            opacity: 0.8;
-        }
-
-        p { color: #fff; }
-
         /* MAILING LIST */
         #mailing-list {
             background: #0a0a0a;
         }
 
+        #mailing-list h2,
+        #mailing-list p {
+            color: #fff !important;
+        }
+
+        #mailing-list form {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            flex-wrap: wrap;
+        }
+
         #mailing-list input {
+            padding: 12px 15px;
+            border-radius: 6px;
+            border: none;
+            min-width: 260px;
             outline: none;
+        }
+
+        #mailing-list button {
+            padding: 12px 20px;
+            border: none;
+            border-radius: 6px;
+            background: #fff;
+            color: #000;
+            font-weight: bold;
+            cursor: pointer;
         }
 
         #mailing-list button:hover {
             opacity: 0.85;
-            transform: translateY(-2px);
-            transition: 0.2s ease;
         }
+
+        p { color: #fff; }
     </style>
 </head>
 
@@ -149,6 +168,7 @@
 
                     <!-- NAME + SOCIAL -->
                     <div class="brand-wrapper">
+
                         <a href="#home" class="nav-brand">DANIEL MESCHINO</a>
 
                         <div class="social-icons">
@@ -168,6 +188,7 @@
                                 <i class="fa-brands fa-youtube"></i>
                             </a>
                         </div>
+
                     </div>
 
                     <!-- MENU -->
@@ -237,25 +258,25 @@
             <div class="music-card">
                 <img src="img/bg-img/YourEverythingCoverArt.jpg">
                 <h5>Your Everything</h5>
-                <a href="https://open.spotify.com/track/4hNGYwcRzgpliOVijt6HEQ?si=e6e20730e4eb4659" target="_blank">Listen</a>
+                <a href="https://open.spotify.com/track/4hNGYwcRzgpliOVijt6HEQ" target="_blank">Listen</a>
             </div>
 
             <div class="music-card">
                 <img src="img/bg-img/WaitForMeCoverArt.JPG">
                 <h5>Wait For Me</h5>
-                <a href="https://open.spotify.com/track/67spze8p1rBDdjyHWgHvXc?si=b27d157193624a75" target="_blank">Listen</a>
+                <a href="https://open.spotify.com/track/67spze8p1rBDdjyHWgHvXc" target="_blank">Listen</a>
             </div>
 
             <div class="music-card">
                 <img src="img/bg-img/ShakeCoverArt.JPG">
                 <h5>Shake</h5>
-                <a href="https://open.spotify.com/track/6I4TyovYNRmlBEb32UaPcb?si=d12cc87f24b74b58" target="_blank">Listen</a>
+                <a href="https://open.spotify.com/track/6I4TyovYNRmlBEb32UaPcb" target="_blank">Listen</a>
             </div>
 
             <div class="music-card">
                 <img src="img/bg-img/AloneCoverArt.jpg">
                 <h5>Alone</h5>
-                <a href="https://open.spotify.com/track/7LpdTIUenvzztjEUTq8S2F?si=f71e1ca86a3641be" target="_blank">Listen</a>
+                <a href="https://open.spotify.com/track/7LpdTIUenvzztjEUTq8S2F" target="_blank">Listen</a>
             </div>
 
         </div>
@@ -290,25 +311,15 @@
 
         <h2 class="section-title">Be First to Hear New Music</h2>
 
-        <p style="max-width:600px;margin:auto;margin-bottom:25px;">
-            Join the mailing list for updates, releases, and exclusive content.
-        </p>
+        <p>Join the mailing list for exclusive updates & releases.</p>
 
         <form action="https://gmail.us3.list-manage.com/subscribe/post?u=c5b591f801cbd0c441c893b3a&id=c9f2a920a1"
               method="post"
-              target="_blank"
-              style="display:flex;justify-content:center;gap:10px;flex-wrap:wrap;">
+              target="_blank">
 
-            <input type="email"
-                   name="EMAIL"
-                   placeholder="Enter your email"
-                   required
-                   style="padding:12px 15px;border-radius:6px;border:none;min-width:260px;">
+            <input type="email" name="EMAIL" placeholder="Enter your email" required>
 
-            <button type="submit"
-                    style="padding:12px 20px;border:none;border-radius:6px;background:#fff;color:#000;font-weight:bold;cursor:pointer;">
-                Subscribe
-            </button>
+            <button type="submit">Subscribe</button>
 
         </form>
 
