@@ -17,7 +17,7 @@
 
     <style>
         html { scroll-behavior: smooth; }
-        body { overflow-x: hidden; }
+        body { overflow-x: hidden; background:#000; }
 
         /* HEADER */
         .header-area,
@@ -57,11 +57,7 @@
             transform: translateY(-2px);
         }
 
-        /* HERO TEXT */
-        .hero-area * {
-            color: #fff !important;
-        }
-
+        /* GENERAL */
         section {
             padding: 100px 0;
         }
@@ -70,6 +66,13 @@
             text-align: center;
             margin-bottom: 50px;
             color: #fff;
+        }
+
+        p { color: #fff; }
+
+        /* HERO */
+        .hero-area * {
+            color: #fff !important;
         }
 
         /* MUSIC */
@@ -123,22 +126,30 @@
             color: #fff !important;
         }
 
-        #mailing-list form {
+        #mailing-list form,
+        #contact form {
             display: flex;
             justify-content: center;
             gap: 10px;
             flex-wrap: wrap;
+            max-width: 700px;
+            margin: auto;
         }
 
-        #mailing-list input {
-            padding: 12px 15px;
+        input, textarea {
+            padding: 12px;
             border-radius: 6px;
             border: none;
-            min-width: 260px;
             outline: none;
+            width: 100%;
+            max-width: 300px;
         }
 
-        #mailing-list button {
+        textarea {
+            max-width: 620px;
+        }
+
+        button {
             padding: 12px 20px;
             border: none;
             border-radius: 6px;
@@ -148,11 +159,9 @@
             cursor: pointer;
         }
 
-        #mailing-list button:hover {
+        button:hover {
             opacity: 0.85;
         }
-
-        p { color: #fff; }
     </style>
 </head>
 
@@ -166,7 +175,6 @@
 
                 <nav class="classy-navbar justify-content-between">
 
-                    <!-- NAME + SOCIAL -->
                     <div class="brand-wrapper">
 
                         <a href="#home" class="nav-brand">DANIEL MESCHINO</a>
@@ -191,28 +199,6 @@
 
                     </div>
 
-                    <!-- MENU -->
-                    <div class="classy-navbar-toggler">
-                        <span class="navbarToggler"><span></span><span></span><span></span></span>
-                    </div>
-
-                    <div class="classy-menu">
-                        <div class="classycloseIcon">
-                            <div class="cross-wrap"><span class="top"></span><span class="bottom"></span></div>
-                        </div>
-
-                        <div class="classynav">
-                            <ul>
-                                <li><a href="#home">Home</a></li>
-                                <li><a href="#music">Music</a></li>
-                                <li><a href="#about">About</a></li>
-                                <li><a href="#contact">Contact</a></li>
-                                <li><a href="#mailing-list">Mailing List</a></li>
-                            </ul>
-                        </div>
-
-                    </div>
-
                 </nav>
 
             </div>
@@ -223,24 +209,17 @@
 <!-- HERO -->
 <section id="home" class="hero-area">
 
-    <div class="single-hero-slide d-flex align-items-center justify-content-center">
+    <div class="container text-center">
 
-        <div class="slide-img bg-img"
-             style="background-image: url(img/bg-img/YourEverythingCoverArt.jpg);"></div>
+        <div style="padding:120px 20px;">
+            <h6 style="color:#fff;">Latest Release</h6>
+            <h2 style="color:#fff;">YOUR EVERYTHING</h2>
 
-        <div class="container text-center">
-
-            <div class="hero-slides-content">
-                <h6>Latest Release</h6>
-                <h2>YOUR EVERYTHING</h2>
-
-                <a href="https://open.spotify.com/track/4hNGYwcRzgpliOVijt6HEQ?si=e6e20730e4eb4659"
-                   target="_blank"
-                   class="btn oneMusic-btn mt-50">
-                   Listen Now
-                </a>
-            </div>
-
+            <a href="https://open.spotify.com/track/4hNGYwcRzgpliOVijt6HEQ?si=e6e20730e4eb4659"
+               target="_blank"
+               style="display:inline-block;margin-top:30px;padding:12px 22px;background:#fff;color:#000;border-radius:6px;font-weight:bold;text-decoration:none;">
+               Listen Now
+            </a>
         </div>
 
     </div>
@@ -300,8 +279,20 @@
 <!-- CONTACT -->
 <section id="contact">
     <div class="container text-center">
+
         <h2 class="section-title">Contact</h2>
-        <p>Email: your-email@example.com</p>
+
+        <form action="https://formspree.io/f/mnjwpkgg" method="POST">
+
+            <input type="text" name="name" placeholder="Your Name" required>
+            <input type="email" name="email" placeholder="Your Email" required>
+
+            <textarea name="message" rows="6" placeholder="Your Message" required></textarea>
+
+            <button type="submit">Send Message</button>
+
+        </form>
+
     </div>
 </section>
 
@@ -311,7 +302,7 @@
 
         <h2 class="section-title">Be First to Hear New Music</h2>
 
-        <p>Join the mailing list for exclusive updates & releases.</p>
+        <p>Join the mailing list for updates & exclusive releases.</p>
 
         <form action="https://gmail.us3.list-manage.com/subscribe/post?u=c5b591f801cbd0c441c893b3a&id=c9f2a920a1"
               method="post"
@@ -332,12 +323,6 @@
         <p>© <script>document.write(new Date().getFullYear());</script> Daniel Meschino</p>
     </div>
 </footer>
-
-<!-- JS -->
-<script src="js/jquery/jquery-2.2.4.min.js"></script>
-<script src="js/bootstrap/bootstrap.min.js"></script>
-<script src="js/plugins/plugins.js"></script>
-<script src="js/active.js"></script>
 
 </body>
 </html>
