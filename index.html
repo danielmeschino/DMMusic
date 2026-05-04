@@ -48,9 +48,7 @@ nav a {
     margin-left: 20px;
     color: white;
     text-decoration: none;
-    font-weight: 400;
     opacity: 0.8;
-    transition: 0.2s;
 }
 
 nav a:hover {
@@ -64,7 +62,10 @@ nav a:hover {
     justify-content: center;
     align-items: center;
     text-align: center;
-    background: url("YourEverythingCoverArt.JPG") center/cover no-repeat;
+
+    /* ✅ FIXED PATH */
+    background: url("img/bg-img/YourEverythingCoverArt.JPG") center/cover no-repeat;
+
     position: relative;
 }
 
@@ -80,17 +81,11 @@ nav a:hover {
     z-index: 2;
 }
 
-/* HERO ARTIST IMAGE */
+/* HERO IMAGE */
 .hero-content img {
     width: 420px;
     max-width: 80%;
     margin-bottom: 15px;
-}
-
-/* TAGLINE */
-.hero p {
-    font-size: 18px;
-    opacity: 0.85;
 }
 
 /* SECTIONS */
@@ -124,16 +119,10 @@ iframe {
 
 /* CONTACT */
 .socials a {
-    display: inline-block;
     margin-right: 15px;
     color: white;
     text-decoration: none;
     border-bottom: 1px solid rgba(255,255,255,0.4);
-    transition: 0.2s;
-}
-
-.socials a:hover {
-    border-bottom: 1px solid white;
 }
 
 /* FOOTER */
@@ -147,10 +136,10 @@ footer {
 
 <body>
 
-<!-- HEADER -->
 <header>
     <div class="logo">
-        <img src="DanielMeschinoWhiteBG.JPG" alt="Daniel Meschino Logo">
+        <!-- ✅ FIXED PATH -->
+        <img src="img/bg-img/DanielMeschinoWhiteBG.JPG" alt="Logo">
     </div>
 
     <nav>
@@ -163,7 +152,8 @@ footer {
 <!-- HERO -->
 <div class="hero">
     <div class="hero-content">
-        <img src="DanielMeschinoWhiteBG.JPG" alt="Daniel Meschino">
+        <!-- same image used as artist name -->
+        <img src="img/bg-img/DanielMeschinoWhiteBG.JPG" alt="Daniel Meschino">
         <p>New music out now</p>
     </div>
 </div>
@@ -191,8 +181,7 @@ footer {
     <h2>About</h2>
     <div class="about">
         <p>
-            Daniel Meschino is a modern artist blending emotional storytelling with cinematic sound.
-            His music focuses on real experiences, relationships, and atmosphere-driven production.
+        Write your artist bio here. Keep it clean, emotional, and real.
         </p>
     </div>
 </section>
