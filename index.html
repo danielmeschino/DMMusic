@@ -16,6 +16,21 @@
             scroll-behavior: smooth;
         }
 
+        body {
+            overflow-x: hidden;
+        }
+
+        /* FIX WHITE BAR ISSUE */
+        .header-area {
+            position: absolute;
+            width: 100%;
+            z-index: 9999;
+        }
+
+        .oneMusic-main-menu {
+            background: transparent !important;
+        }
+
         .nav-brand {
             color: #fff !important;
             font-size: 28px;
@@ -81,7 +96,7 @@
     <div class="lds-ellipsis"><div></div><div></div><div></div><div></div></div>
 </div>
 
-<!-- HEADER (UNCHANGED THEME) -->
+<!-- HEADER (FIXED STRUCTURE) -->
 <header class="header-area">
     <div class="oneMusic-main-menu">
         <div class="classy-nav-container breakpoint-off">
@@ -107,7 +122,7 @@
                                 <li><a href="#about">About</a></li>
                                 <li><a href="#contact">Contact</a></li>
 
-                                <!-- keep external pages untouched -->
+                                <!-- KEEP YOUR OTHER PAGES SAFE -->
                                 <li><a href="albums-store.html">Albums</a></li>
                                 <li><a href="event.html">Events</a></li>
                             </ul>
@@ -184,8 +199,8 @@
 
         <p style="max-width:800px;margin:auto;line-height:1.8;">
             After starting as a guitarist and vocalist in Toronto’s pop-punk scene,
-            Daniel Meschino has evolved into a singer-songwriter creating emotional,
-            melodic pop music influenced by John Mayer, Justin Bieber, and Shawn Mendes.
+            Daniel Meschino has evolved into a modern singer-songwriter creating emotional pop music
+            influenced by John Mayer, Justin Bieber, and Shawn Mendes.
         </p>
     </div>
 </section>
