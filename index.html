@@ -11,7 +11,6 @@
     <link rel="icon" href="img/core-img/favicon.ico">
     <link rel="stylesheet" href="style.css">
 
-    <!-- Icons -->
     <link rel="stylesheet"
           href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
@@ -19,7 +18,6 @@
         html { scroll-behavior: smooth; }
         body { overflow-x: hidden; }
 
-        /* HEADER */
         .header-area {
             position: absolute;
             width: 100%;
@@ -53,16 +51,6 @@
             font-size: 16px;
         }
 
-        .social-icons a:hover {
-            opacity: 0.6;
-        }
-
-        /* HERO TEXT */
-        .hero-slides-content,
-        .hero-slides-content * {
-            color: #fff !important;
-        }
-
         section { padding: 100px 0; }
 
         .section-title {
@@ -70,7 +58,6 @@
             margin-bottom: 50px;
         }
 
-        /* MUSIC */
         .music-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
@@ -106,7 +93,7 @@
             text-decoration: none;
         }
 
-        /* CONTACT FORM */
+        /* CONTACT */
         .contact-wrapper {
             max-width: 600px;
             margin: auto;
@@ -115,7 +102,7 @@
         .contact-form {
             display: flex;
             flex-direction: column;
-            gap: 20px;
+            gap: 15px;
         }
 
         .contact-form input,
@@ -128,12 +115,6 @@
             color: #fff;
         }
 
-        .contact-form input:focus,
-        .contact-form textarea:focus {
-            border-color: #fff;
-            outline: none;
-        }
-
         .contact-form button {
             padding: 14px;
             background: #fff;
@@ -143,14 +124,9 @@
             font-weight: bold;
         }
 
-        /* MAILING LIST */
+        /* MAILING */
         #mailing-list {
             background: #0a0a0a;
-        }
-
-        #mailing-list h2,
-        #mailing-list p {
-            color: #fff !important;
         }
 
         .mailing-form {
@@ -199,25 +175,6 @@
                         </div>
                     </div>
 
-                    <div class="classy-navbar-toggler">
-                        <span class="navbarToggler"><span></span><span></span><span></span></span>
-                    </div>
-
-                    <div class="classy-menu">
-                        <div class="classycloseIcon">
-                            <div class="cross-wrap"><span></span><span></span></div>
-                        </div>
-
-                        <div class="classynav">
-                            <ul>
-                                <li><a href="#home">Home</a></li>
-                                <li><a href="#music">Music</a></li>
-                                <li><a href="#contact">Contact</a></li>
-                                <li><a href="#mailing-list">Mailing List</a></li>
-                            </ul>
-                        </div>
-                    </div>
-
                 </nav>
 
             </div>
@@ -225,11 +182,14 @@
     </div>
 </header>
 
-<!-- HERO -->
+<!-- HERO (IMPORTANT FIX HERE) -->
 <section id="home" class="hero-area">
+
     <div class="single-hero-slide d-flex align-items-center justify-content-center">
+
+        <!-- FIX: keep bg-img ONLY, no inline override conflicts -->
         <div class="slide-img bg-img"
-             style="background-image: url(img/bg-img/YourEverythingCoverArt.JPG);"></div>
+             data-setbg="img/bg-img/YourEverythingCoverArt.JPG"></div>
 
         <div class="container text-center">
             <div class="hero-slides-content">
@@ -243,6 +203,7 @@
                 </a>
             </div>
         </div>
+
     </div>
 </section>
 
@@ -252,29 +213,31 @@
         <h2 class="section-title">Music</h2>
 
         <div class="music-grid">
+
             <div class="music-card">
                 <img src="img/bg-img/YourEverythingCoverArt.JPG">
                 <h5>Your Everything</h5>
-                <a href="https://open.spotify.com/track/4hNGYwcRzgpliOVijt6HEQ">Listen</a>
+                <a href="#">Listen</a>
             </div>
 
             <div class="music-card">
                 <img src="img/bg-img/WaitForMeCoverArt.JPG">
                 <h5>Wait For Me</h5>
-                <a href="https://open.spotify.com/track/67spze8p1rBDdjyHWgHvXc">Listen</a>
+                <a href="#">Listen</a>
             </div>
 
             <div class="music-card">
                 <img src="img/bg-img/ShakeCoverArt.JPG">
                 <h5>Shake</h5>
-                <a href="https://open.spotify.com/track/6I4TyovYNRmlBEb32UaPcb">Listen</a>
+                <a href="#">Listen</a>
             </div>
 
             <div class="music-card">
                 <img src="img/bg-img/AloneCoverArt.JPG">
                 <h5>Alone</h5>
-                <a href="https://open.spotify.com/track/7LpdTIUenvzztjEUTq8S2F">Listen</a>
+                <a href="#">Listen</a>
             </div>
+
         </div>
     </div>
 </section>
@@ -289,7 +252,7 @@
                 <input type="text" name="name" placeholder="Your Name" required>
                 <input type="email" name="email" placeholder="Your Email" required>
                 <textarea name="message" rows="6" placeholder="Your Message" required></textarea>
-                <button type="submit">Send Message</button>
+                <button type="submit">Send</button>
             </form>
         </div>
     </div>
@@ -298,18 +261,27 @@
 <!-- MAILING LIST -->
 <section id="mailing-list">
     <div class="container text-center">
-        <h2 class="section-title">Be First to Hear New Music</h2>
+        <h2 class="section-title" style="color:white;">
+            Be First to Hear New Music
+        </h2>
 
-        <form action="https://gmail.us3.list-manage.com/subscribe/post?u=c5b591f801cbd0c441c893b3a&id=c9f2a920a1"
+        <form class="mailing-form"
+              action="https://gmail.us3.list-manage.com/subscribe/post?u=c5b591f801cbd0c441c893b3a&id=c9f2a920a1"
               method="post"
-              target="_blank"
-              class="mailing-form">
+              target="_blank">
 
-            <input type="email" name="EMAIL" placeholder="Enter your email" required>
+            <input type="email" name="EMAIL" placeholder="Enter email" required>
             <button type="submit">Subscribe</button>
         </form>
+
     </div>
 </section>
+
+<!-- IMPORTANT SCRIPT FOR HERO BACKGROUND -->
+<script src="js/jquery/jquery-2.2.4.min.js"></script>
+<script src="js/bootstrap/bootstrap.min.js"></script>
+<script src="js/plugins/plugins.js"></script>
+<script src="js/active.js"></script>
 
 </body>
 </html>
