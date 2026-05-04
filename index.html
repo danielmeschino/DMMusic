@@ -86,6 +86,10 @@
         .music-card a:hover {
             opacity: 0.8;
         }
+
+        iframe {
+            margin-top: 10px;
+        }
     </style>
 </head>
 
@@ -96,7 +100,7 @@
     <div class="lds-ellipsis"><div></div><div></div><div></div><div></div></div>
 </div>
 
-<!-- HEADER (FIXED STRUCTURE) -->
+<!-- HEADER -->
 <header class="header-area">
     <div class="oneMusic-main-menu">
         <div class="classy-nav-container breakpoint-off">
@@ -122,7 +126,6 @@
                                 <li><a href="#about">About</a></li>
                                 <li><a href="#contact">Contact</a></li>
 
-                                <!-- KEEP YOUR OTHER PAGES SAFE -->
                                 <li><a href="albums-store.html">Albums</a></li>
                                 <li><a href="event.html">Events</a></li>
                             </ul>
@@ -145,12 +148,28 @@
              style="background-image: url(img/bg-img/YourEverythingCoverArt.jpg);"></div>
 
         <div class="container text-center">
+
             <h6>Latest Release</h6>
             <h2>YOUR EVERYTHING</h2>
 
-            <a href="https://open.spotify.com/track/4hNGYwcRzgpliOVijt6HEQ?si=e6e20730e4eb4659"
-               target="_blank"
-               class="btn oneMusic-btn mt-50">Listen Now</a>
+            <!-- SPOTIFY EMBED -->
+            <iframe style="border-radius:12px"
+                src="https://open.spotify.com/embed/track/4hNGYwcRzgpliOVijt6HEQ"
+                width="320"
+                height="80"
+                frameborder="0"
+                allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture">
+            </iframe>
+
+            <!-- SECOND FEATURE -->
+            <iframe style="border-radius:12px"
+                src="https://open.spotify.com/embed/track/67spze8p1rBDdjyHWgHvXc"
+                width="320"
+                height="80"
+                frameborder="0"
+                allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture">
+            </iframe>
+
         </div>
 
     </div>
@@ -199,7 +218,7 @@
 
         <p style="max-width:800px;margin:auto;line-height:1.8;">
             After starting as a guitarist and vocalist in Toronto’s pop-punk scene,
-            Daniel Meschino has evolved into a modern singer-songwriter creating emotional pop music
+            Daniel Meschino has evolved into a singer-songwriter creating emotional pop music
             influenced by John Mayer, Justin Bieber, and Shawn Mendes.
         </p>
     </div>
