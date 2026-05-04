@@ -3,102 +3,135 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="description" content="Official music website for Daniel Meschino">
+    <meta name="description" content="Daniel Meschino Music Artist Website">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <title>Daniel Meschino | Official Music</title>
+    <!-- Title -->
+    <title>Daniel Meschino</title>
 
+    <!-- Favicon -->
     <link rel="icon" href="img/core-img/favicon.ico">
+
+    <!-- Stylesheet -->
     <link rel="stylesheet" href="style.css">
 
     <style>
-        /* Force white title text */
-        .hero-area h1{
-            color:#fff !important;
-        }
-
-        h1{
-            color:#fff !important;
-        }
-
-        .hero-buttons a{
-            display:inline-block;
-            margin:10px;
-            padding:12px 20px;
-            background:#111;
-            color:#fff;
-            text-decoration:none;
-            border-radius:30px;
-        }
-
-        .hero-buttons a:hover{opacity:0.8;}
-
-        .socials a{
-            margin:0 10px;
-            color:#fff;
-            text-decoration:none;
-        }
-
-        .section-center{
-            text-align:center;
-            padding:60px 20px;
+        /* Force your artist name styling */
+        .nav-brand {
+            color: #ffffff !important;
+            font-size: 28px;
+            font-weight: 700;
+            letter-spacing: 2px;
+            text-transform: uppercase;
         }
     </style>
 </head>
 
 <body>
 
-    <!-- Hero -->
-    <section class="hero-area section-center" style="background:#111;color:#fff;">
-        <h1 style="color:#ffffff !important;">Daniel Meschino</h1>
-        <p>Official Music | New Releases | Live Shows</p>
+    <!-- Preloader -->
+    <div class="preloader d-flex align-items-center justify-content-center">
+        <div class="lds-ellipsis"><div></div><div></div><div></div><div></div></div>
+    </div>
 
-        <div class="hero-buttons">
-            <a href="#music">Listen</a>
-            <a href="https://open.spotify.com" target="_blank">Spotify</a>
-            <a href="https://music.apple.com" target="_blank">Apple Music</a>
+    <!-- Header -->
+    <header class="header-area">
+        <div class="oneMusic-main-menu">
+            <div class="classy-nav-container breakpoint-off">
+                <div class="container">
+
+                    <nav class="classy-navbar justify-content-between" id="oneMusicNav">
+
+                        <!-- YOUR NAME (REPLACED LOGO) -->
+                        <a href="index.html" class="nav-brand">DANIEL MESCHINO</a>
+
+                        <!-- Toggle -->
+                        <div class="classy-navbar-toggler">
+                            <span class="navbarToggler"><span></span><span></span><span></span></span>
+                        </div>
+
+                        <!-- Menu -->
+                        <div class="classy-menu">
+                            <div class="classycloseIcon">
+                                <div class="cross-wrap"><span class="top"></span><span class="bottom"></span></div>
+                            </div>
+
+                            <div class="classynav">
+                                <ul>
+                                    <li><a href="index.html">Home</a></li>
+                                    <li><a href="albums-store.html">Albums</a></li>
+                                    <li><a href="event.html">Events</a></li>
+                                    <li><a href="blog.html">News</a></li>
+                                    <li><a href="contact.html">Contact</a></li>
+                                </ul>
+
+                                <div class="login-register-cart-button d-flex align-items-center">
+                                    <div class="login-register-btn mr-50">
+                                        <a href="login.html">Login / Register</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </nav>
+                </div>
+            </div>
         </div>
+    </header>
 
-        <div class="socials" style="margin-top:20px;">
-            <a href="#">Instagram</a>
-            <a href="#">YouTube</a>
-            <a href="#">TikTok</a>
+    <!-- HERO -->
+    <section class="hero-area">
+        <div class="hero-slides owl-carousel">
+
+            <div class="single-hero-slide d-flex align-items-center justify-content-center">
+                <div class="slide-img bg-img" style="background-image: url(img/bg-img/bg-1.jpg);"></div>
+                <div class="container">
+                    <div class="hero-slides-content text-center">
+                        <h6>New Release</h6>
+                        <h2>DANIEL MESCHINO <span>DANIEL MESCHINO</span></h2>
+                        <a href="#" class="btn oneMusic-btn mt-50">Listen Now</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="single-hero-slide d-flex align-items-center justify-content-center">
+                <div class="slide-img bg-img" style="background-image: url(img/bg-img/bg-2.jpg);"></div>
+                <div class="container">
+                    <div class="hero-slides-content text-center">
+                        <h6>Latest Music</h6>
+                        <h2>New Sound <span>New Sound</span></h2>
+                        <a href="#" class="btn oneMusic-btn mt-50">Explore</a>
+                    </div>
+                </div>
+            </div>
+
         </div>
     </section>
 
-    <!-- Music Section -->
-    <section id="music" class="section-center">
-        <h2>Latest Release</h2>
-        <p>Stream my newest track now</p>
-
-        <iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/placeholder" width="100%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>
+    <!-- ABOUT / INTRO -->
+    <section class="latest-albums-area section-padding-100">
+        <div class="container text-center">
+            <h2>About Me</h2>
+            <p style="max-width: 700px; margin: auto;">
+                Welcome to the official site of Daniel Meschino. Music, creativity, and emotion all come together here.
+                Stay tuned for new releases, shows, and exclusive content.
+            </p>
+        </div>
     </section>
 
-    <!-- About -->
-    <section class="section-center" style="background:#f5f5f5;">
-        <h2>About</h2>
-        <p>
-            Daniel Meschino is an independent artist creating emotional, modern pop-inspired music.
-            New songs, visuals, and live performances coming soon.
-        </p>
-    </section>
-
-    <!-- Contact -->
-    <section class="section-center" style="background:#111;color:#fff;">
-        <h2>Bookings / Contact</h2>
-        <form>
-            <input type="text" placeholder="Name" style="padding:10px;width:80%;margin:10px;"><br>
-            <input type="email" placeholder="Email" style="padding:10px;width:80%;margin:10px;"><br>
-            <textarea placeholder="Message" style="padding:10px;width:80%;height:120px;margin:10px;"></textarea><br>
-            <button style="padding:12px 25px;background:#fff;color:#000;border:none;border-radius:20px;">Send</button>
-        </form>
-    </section>
-
-    <!-- Footer -->
-    <footer class="section-center">
-        <p>© 2026 Daniel Meschino</p>
+    <!-- FOOTER -->
+    <footer class="footer-area">
+        <div class="container text-center">
+            <p>© <script>document.write(new Date().getFullYear());</script> Daniel Meschino. All rights reserved.</p>
+        </div>
     </footer>
+
+    <!-- JS -->
+    <script src="js/jquery/jquery-2.2.4.min.js"></script>
+    <script src="js/bootstrap/bootstrap.min.js"></script>
+    <script src="js/plugins/plugins.js"></script>
+    <script src="js/active.js"></script>
 
 </body>
 </html>
