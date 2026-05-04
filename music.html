@@ -1,1 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
 
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Daniel Meschino Music">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <title>Music | Daniel Meschino</title>
+
+    <link rel="icon" href="img/core-img/favicon.ico">
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+        .music-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            max-width: 1100px;
+            margin: 60px auto;
+        }
+
+        .music-card {
+            background: #111;
+            border-radius: 10px;
+            overflow: hidden;
+            text-align: center;
+            padding-bottom: 20px;
+        }
+
+        .music-card img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+        }
+
+        .music-card h3 {
+            margin: 15px 0 5px;
+            color: #fff;
+        }
+
+        .music-card a {
+            display: inline-block;
+            margin-top: 10px;
+            padding: 10px 20px;
+            background: #fff;
+            color: #000;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .music-card a:hover {
+            opacity: 0.8;
+        }
+    </style>
+</head>
+
+<body>
+
+<!-- Header -->
+<header class="header-area">
+    <div class="container text-center" style="padding: 40px 0;">
+        <h1 style="color:white;">Music</h1>
+    </div>
+</header>
+
+<!-- MUSIC GRID -->
+<section>
+    <div class="music-grid">
+
+        <!-- YOUR EVERYTHING -->
+        <div class="music-card">
+            <img src="img/bg-img/YourEverythingCoverArt.jpg" alt="">
+            <h3>Your Everything</h3>
+            <a href="https://open.spotify.com/track/4hNGYwcRzgpliOVijt6HEQ?si=e6e20730e4eb4659" target="_blank">Listen</a>
+        </div>
+
+        <!-- WAIT FOR ME -->
+        <div class="music-card">
+            <img src="img/bg-img/WaitForMeCoverArt.JPG" alt="">
+            <h3>Wait For Me</h3>
+            <a href="https://open.spotify.com/track/67spze8p1rBDdjyHWgHvXc?si=b27d157193624a75" target="_blank">Listen</a>
+        </div>
+
+        <!-- ALONE -->
+        <div class="music-card">
+            <img src="img/bg-img/AloneCoverArt.JPG" alt="">
+            <h3>Alone</h3>
+            <a href="https://open.spotify.com/track/7LpdTIUenvzztjEUTq8S2F?si=f71e1ca86a3641be" target="_blank">Listen</a>
+        </div>
+
+        <!-- SHAKE -->
+        <div class="music-card">
+            <img src="img/bg-img/ShakeCoverArt.JPG" alt="">
+            <h3>Shake</h3>
+            <a href="https://open.spotify.com/track/6I4TyovYNRmlBEb32UaPcb?si=d12cc87f24b74b58" target="_blank">Listen</a>
+        </div>
+
+    </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer-area">
+    <div class="container text-center">
+        <p>© <script>document.write(new Date().getFullYear());</script> Daniel Meschino. All rights reserved.</p>
+    </div>
+</footer>
+
+</body>
+</html>
