@@ -13,12 +13,22 @@
     <link rel="stylesheet" href="style.css">
 
     <style>
+        .nav-brand {
+            color: #ffffff !important;
+            font-size: 28px;
+            font-weight: 700;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+        }
+
+        .music-section {
+            padding: 100px 0;
+        }
+
         .music-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
             gap: 30px;
-            max-width: 1100px;
-            margin: 60px auto;
         }
 
         .music-card {
@@ -27,6 +37,11 @@
             overflow: hidden;
             text-align: center;
             padding-bottom: 20px;
+            transition: transform 0.3s ease;
+        }
+
+        .music-card:hover {
+            transform: translateY(-5px);
         }
 
         .music-card img {
@@ -59,45 +74,94 @@
 
 <body>
 
-<!-- Header -->
+<!-- Preloader -->
+<div class="preloader d-flex align-items-center justify-content-center">
+    <div class="lds-ellipsis"><div></div><div></div><div></div><div></div></div>
+</div>
+
+<!-- Header (MATCHED TO YOUR THEME) -->
 <header class="header-area">
-    <div class="container text-center" style="padding: 40px 0;">
-        <h1 style="color:white;">Music</h1>
+    <div class="oneMusic-main-menu">
+        <div class="classy-nav-container breakpoint-off">
+            <div class="container">
+
+                <nav class="classy-navbar justify-content-between" id="oneMusicNav">
+
+                    <a href="index.html" class="nav-brand">DANIEL MESCHINO</a>
+
+                    <div class="classy-navbar-toggler">
+                        <span class="navbarToggler"><span></span><span></span><span></span></span>
+                    </div>
+
+                    <div class="classy-menu">
+                        <div class="classycloseIcon">
+                            <div class="cross-wrap"><span class="top"></span><span class="bottom"></span></div>
+                        </div>
+
+                        <div class="classynav">
+                            <ul>
+                                <li><a href="index.html">Home</a></li>
+                                <li><a href="albums-store.html">Albums</a></li>
+                                <li><a href="event.html">Events</a></li>
+                                <li><a href="music.html">Music</a></li>
+                                <li><a href="contact.html">Contact</a></li>
+                            </ul>
+
+                            <div class="login-register-cart-button d-flex align-items-center">
+                                <div class="login-register-btn mr-50">
+                                    <a href="login.html">Login / Register</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </nav>
+
+            </div>
+        </div>
     </div>
 </header>
 
-<!-- MUSIC GRID -->
-<section>
-    <div class="music-grid">
+<!-- MUSIC SECTION -->
+<section class="music-section">
+    <div class="container">
 
-        <!-- YOUR EVERYTHING -->
-        <div class="music-card">
-            <img src="img/bg-img/YourEverythingCoverArt.jpg" alt="">
-            <h3>Your Everything</h3>
-            <a href="https://open.spotify.com/track/4hNGYwcRzgpliOVijt6HEQ?si=e6e20730e4eb4659" target="_blank">Listen</a>
+        <div class="text-center mb-5">
+            <h2 style="color:white;">Music</h2>
+            <p style="color:#aaa;">Stream all releases below</p>
         </div>
 
-        <!-- WAIT FOR ME -->
-        <div class="music-card">
-            <img src="img/bg-img/WaitForMeCoverArt.JPG" alt="">
-            <h3>Wait For Me</h3>
-            <a href="https://open.spotify.com/track/67spze8p1rBDdjyHWgHvXc?si=b27d157193624a75" target="_blank">Listen</a>
-        </div>
+        <div class="music-grid">
 
-        <!-- ALONE -->
-        <div class="music-card">
-            <img src="img/bg-img/AloneCoverArt.JPG" alt="">
-            <h3>Alone</h3>
-            <a href="https://open.spotify.com/track/7LpdTIUenvzztjEUTq8S2F?si=f71e1ca86a3641be" target="_blank">Listen</a>
-        </div>
+            <!-- YOUR EVERYTHING -->
+            <div class="music-card">
+                <img src="img/bg-img/YourEverythingCoverArt.jpg" alt="">
+                <h3>Your Everything</h3>
+                <a href="https://open.spotify.com/track/4hNGYwcRzgpliOVijt6HEQ?si=e6e20730e4eb4659" target="_blank">Listen</a>
+            </div>
 
-        <!-- SHAKE -->
-        <div class="music-card">
-            <img src="img/bg-img/ShakeCoverArt.JPG" alt="">
-            <h3>Shake</h3>
-            <a href="https://open.spotify.com/track/6I4TyovYNRmlBEb32UaPcb?si=d12cc87f24b74b58" target="_blank">Listen</a>
-        </div>
+            <!-- WAIT FOR ME -->
+            <div class="music-card">
+                <img src="img/bg-img/WaitForMeCoverArt.JPG" alt="">
+                <h3>Wait For Me</h3>
+                <a href="https://open.spotify.com/track/67spze8p1rBDdjyHWgHvXc?si=b27d157193624a75" target="_blank">Listen</a>
+            </div>
 
+            <!-- ALONE -->
+            <div class="music-card">
+                <img src="img/bg-img/AloneCoverArt.JPG" alt="">
+                <h3>Alone</h3>
+                <a href="https://open.spotify.com/track/7LpdTIUenvzztjEUTq8S2F?si=f71e1ca86a3641be" target="_blank">Listen</a>
+            </div>
+
+            <!-- SHAKE -->
+            <div class="music-card">
+                <img src="img/bg-img/ShakeCoverArt.JPG" alt="">
+                <h3>Shake</h3>
+                <a href="https://open.spotify.com/track/6I4TyovYNRmlBEb32UaPcb?si=d12cc87f24b74b58" target="_blank">Listen</a>
+            </div>
+
+        </div>
     </div>
 </section>
 
@@ -107,6 +171,12 @@
         <p>© <script>document.write(new Date().getFullYear());</script> Daniel Meschino. All rights reserved.</p>
     </div>
 </footer>
+
+<!-- JS -->
+<script src="js/jquery/jquery-2.2.4.min.js"></script>
+<script src="js/bootstrap/bootstrap.min.js"></script>
+<script src="js/plugins/plugins.js"></script>
+<script src="js/active.js"></script>
 
 </body>
 </html>
