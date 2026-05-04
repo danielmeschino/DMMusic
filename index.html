@@ -1,230 +1,202 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="description" content="Daniel Meschino Music Artist Website">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 
-    <title>Daniel Meschino</title>
+<title>Your Artist Name</title>
 
-    <link rel="icon" href="img/core-img/favicon.ico">
-    <link rel="stylesheet" href="style.css">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
 
-    <style>
-        html {
-            scroll-behavior: smooth;
-        }
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+    scroll-behavior: smooth;
+}
 
-        body {
-            overflow-x: hidden;
-        }
+body {
+    background: #0b0b0f;
+    color: white;
+}
 
-        /* FIX WHITE BAR ISSUE */
-        .header-area {
-            position: absolute;
-            width: 100%;
-            z-index: 9999;
-        }
+/* HEADER */
+header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    padding: 18px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rgba(0,0,0,0.6);
+    backdrop-filter: blur(10px);
+    z-index: 1000;
+}
 
-        .oneMusic-main-menu {
-            background: transparent !important;
-        }
+.logo {
+    font-weight: 800;
+    letter-spacing: 2px;
+}
 
-        .nav-brand {
-            color: #fff !important;
-            font-size: 28px;
-            font-weight: 700;
-            letter-spacing: 2px;
-            text-transform: uppercase;
-        }
+nav a {
+    margin-left: 20px;
+    color: white;
+    text-decoration: none;
+    font-weight: 400;
+    opacity: 0.8;
+}
 
-        section {
-            padding: 100px 0;
-        }
+nav a:hover {
+    opacity: 1;
+}
 
-        .section-title {
-            text-align: center;
-            margin-bottom: 50px;
-        }
+/* HERO */
+.hero {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background: url("YourCoverArt.jpg") center/cover no-repeat;
+    position: relative;
+}
 
-        .music-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-            gap: 25px;
-        }
+.hero::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0,0,0,0.6);
+}
 
-        .music-card {
-            background: #111;
-            border-radius: 10px;
-            overflow: hidden;
-            text-align: center;
-            padding-bottom: 20px;
-        }
+.hero-content {
+    position: relative;
+    z-index: 2;
+}
 
-        .music-card img {
-            width: 100%;
-            height: 240px;
-            object-fit: cover;
-        }
+.hero h1 {
+    font-size: 60px;
+    font-weight: 800;
+}
 
-        .music-card h5 {
-            margin: 15px 0;
-            color: #fff;
-        }
+.hero p {
+    margin-top: 10px;
+    opacity: 0.8;
+}
 
-        .music-card a {
-            display: inline-block;
-            padding: 10px 18px;
-            background: #fff;
-            color: #000;
-            border-radius: 5px;
-            font-weight: bold;
-            text-decoration: none;
-        }
+/* SECTIONS */
+section {
+    padding: 100px 20px;
+    max-width: 1000px;
+    margin: auto;
+}
 
-        .music-card a:hover {
-            opacity: 0.8;
-        }
-    </style>
+h2 {
+    font-size: 32px;
+    margin-bottom: 20px;
+}
+
+/* MUSIC */
+.music-grid {
+    display: grid;
+    gap: 20px;
+}
+
+iframe {
+    width: 100%;
+    border-radius: 12px;
+}
+
+/* ABOUT */
+.about {
+    line-height: 1.6;
+    opacity: 0.9;
+}
+
+/* CONTACT */
+.socials a {
+    display: inline-block;
+    margin-right: 15px;
+    color: white;
+    text-decoration: none;
+    border-bottom: 1px solid white;
+}
+
+/* FOOTER */
+footer {
+    text-align: center;
+    padding: 40px;
+    opacity: 0.5;
+}
+</style>
 </head>
 
 <body>
 
-<!-- PRELOADER -->
-<div class="preloader d-flex align-items-center justify-content-center">
-    <div class="lds-ellipsis"><div></div><div></div><div></div><div></div></div>
-</div>
-
-<!-- HEADER (FIXED STRUCTURE) -->
-<header class="header-area">
-    <div class="oneMusic-main-menu">
-        <div class="classy-nav-container breakpoint-off">
-            <div class="container">
-
-                <nav class="classy-navbar justify-content-between" id="oneMusicNav">
-
-                    <a href="#home" class="nav-brand">DANIEL MESCHINO</a>
-
-                    <div class="classy-navbar-toggler">
-                        <span class="navbarToggler"><span></span><span></span><span></span></span>
-                    </div>
-
-                    <div class="classy-menu">
-                        <div class="classycloseIcon">
-                            <div class="cross-wrap"><span class="top"></span><span class="bottom"></span></div>
-                        </div>
-
-                        <div class="classynav">
-                            <ul>
-                                <li><a href="#home">Home</a></li>
-                                <li><a href="#music">Music</a></li>
-                                <li><a href="#about">About</a></li>
-                                <li><a href="#contact">Contact</a></li>
-
-                                <!-- KEEP YOUR OTHER PAGES SAFE -->
-                                <li><a href="albums-store.html">Albums</a></li>
-                                <li><a href="event.html">Events</a></li>
-                            </ul>
-                        </div>
-                    </div>
-
-                </nav>
-
-            </div>
-        </div>
-    </div>
+<header>
+    <div class="logo">YOUR NAME</div>
+    <nav>
+        <a href="#music">Music</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+    </nav>
 </header>
 
 <!-- HERO -->
-<section id="home" class="hero-area">
-
-    <div class="single-hero-slide d-flex align-items-center justify-content-center">
-
-        <div class="slide-img bg-img"
-             style="background-image: url(img/bg-img/YourEverythingCoverArt.jpg);"></div>
-
-        <div class="container text-center">
-            <h6>Latest Release</h6>
-            <h2>YOUR EVERYTHING</h2>
-
-            <a href="https://open.spotify.com/track/4hNGYwcRzgpliOVijt6HEQ?si=e6e20730e4eb4659"
-               target="_blank"
-               class="btn oneMusic-btn mt-50">Listen Now</a>
-        </div>
-
+<div class="hero">
+    <div class="hero-content">
+        <h1>YOUR ARTIST NAME</h1>
+        <p>New music out now</p>
     </div>
-
-</section>
+</div>
 
 <!-- MUSIC -->
 <section id="music">
-    <div class="container">
-        <h2 class="section-title">Music</h2>
+    <h2>Music</h2>
 
-        <div class="music-grid">
+    <div class="music-grid">
 
-            <div class="music-card">
-                <img src="img/bg-img/YourEverythingCoverArt.jpg">
-                <h5>Your Everything</h5>
-                <a href="https://open.spotify.com/track/4hNGYwcRzgpliOVijt6HEQ?si=e6e20730e4eb4659" target="_blank">Listen</a>
-            </div>
+        <!-- Spotify embed -->
+        <iframe style="border-radius:12px" 
+        src="https://open.spotify.com/embed/track/placeholder" 
+        height="152" frameborder="0"></iframe>
 
-            <div class="music-card">
-                <img src="img/bg-img/WaitForMeCoverArt.JPG">
-                <h5>Wait For Me</h5>
-                <a href="https://open.spotify.com/track/67spze8p1rBDdjyHWgHvXc?si=b27d157193624a75" target="_blank">Listen</a>
-            </div>
+        <!-- YouTube embed -->
+        <iframe height="315" 
+        src="https://www.youtube.com/embed/VIDEO_ID" 
+        frameborder="0" allowfullscreen></iframe>
 
-            <div class="music-card">
-                <img src="img/bg-img/ShakeCoverArt.JPG">
-                <h5>Shake</h5>
-                <a href="https://open.spotify.com/track/6I4TyovYNRmlBEb32UaPcb?si=d12cc87f24b74b58" target="_blank">Listen</a>
-            </div>
-
-            <div class="music-card">
-                <img src="img/bg-img/AloneCoverArt.jpg">
-                <h5>Alone</h5>
-                <a href="https://open.spotify.com/track/7LpdTIUenvzztjEUTq8S2F?si=f71e1ca86a3641be" target="_blank">Listen</a>
-            </div>
-
-        </div>
     </div>
 </section>
 
 <!-- ABOUT -->
 <section id="about">
-    <div class="container text-center">
-        <h2 class="section-title">About</h2>
-
-        <p style="max-width:800px;margin:auto;line-height:1.8;">
-            After starting as a guitarist and vocalist in Toronto’s pop-punk scene,
-            Daniel Meschino has evolved into a modern singer-songwriter creating emotional pop music
-            influenced by John Mayer, Justin Bieber, and Shawn Mendes.
+    <h2>About</h2>
+    <div class="about">
+        <p>
+        Write your artist bio here. Keep it short, emotional, and real.
+        Talk about your sound, influences, and story.
         </p>
     </div>
 </section>
 
 <!-- CONTACT -->
 <section id="contact">
-    <div class="container text-center">
-        <h2 class="section-title">Contact</h2>
-        <p>Email: your-email@example.com</p>
+    <h2>Contact</h2>
+    <div class="socials">
+        <a href="#">Instagram</a>
+        <a href="#">TikTok</a>
+        <a href="#">YouTube</a>
+        <a href="mailto:you@email.com">Email</a>
     </div>
 </section>
 
-<!-- FOOTER -->
-<footer class="footer-area">
-    <div class="container text-center">
-        <p>© <script>document.write(new Date().getFullYear());</script> Daniel Meschino</p>
-    </div>
+<footer>
+    © 2026 YOUR NAME. All rights reserved.
 </footer>
-
-<!-- JS -->
-<script src="js/jquery/jquery-2.2.4.min.js"></script>
-<script src="js/bootstrap/bootstrap.min.js"></script>
-<script src="js/plugins/plugins.js"></script>
-<script src="js/active.js"></script>
 
 </body>
 </html>
