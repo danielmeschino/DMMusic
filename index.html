@@ -13,6 +13,10 @@
     <link rel="stylesheet" href="style.css">
 
     <style>
+        body {
+            background: #0b0b0f;
+        }
+
         .nav-brand {
             color: #ffffff !important;
             font-size: 28px;
@@ -21,32 +25,63 @@
             text-transform: uppercase;
         }
 
-        .about-text {
-            max-width: 850px;
-            margin: 0 auto;
-            line-height: 1.7;
+        .hero-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(to top, rgba(0,0,0,0.85), rgba(0,0,0,0.2));
+            z-index: 2;
+        }
+
+        .hero-slides-content {
+            position: relative;
+            z-index: 3;
+        }
+
+        .stream-buttons a {
+            display: inline-block;
+            margin: 6px;
+            padding: 10px 16px;
+            border-radius: 30px;
+            border: 1px solid #fff;
+            color: #fff;
+            text-decoration: none;
+            font-size: 13px;
+        }
+
+        .stream-buttons a:hover {
+            background: #fff;
+            color: #000;
+        }
+
+        .about-box {
+            max-width: 900px;
+            margin: auto;
             color: #ddd;
+        }
+
+        .section-title {
+            color: #fff;
+            margin-bottom: 30px;
         }
     </style>
 </head>
 
 <body>
 
-<!-- Preloader -->
 <div class="preloader d-flex align-items-center justify-content-center">
     <div class="lds-ellipsis"><div></div><div></div><div></div><div></div></div>
 </div>
 
-<!-- Header -->
 <header class="header-area">
     <div class="oneMusic-main-menu">
         <div class="classy-nav-container breakpoint-off">
             <div class="container">
 
-                <nav class="classy-navbar justify-content-between">
-
+                <nav class="classy-navbar justify-content-between" id="oneMusicNav">
                     <a href="index.html" class="nav-brand">DANIEL MESCHINO</a>
-
                 </nav>
 
             </div>
@@ -54,23 +89,26 @@
     </div>
 </header>
 
-<!-- HERO (STABLE VERSION) -->
 <section class="hero-area">
-
     <div class="hero-slides owl-carousel">
 
         <!-- YOUR EVERYTHING -->
         <div class="single-hero-slide d-flex align-items-center justify-content-center">
             <div class="slide-img bg-img" style="background-image: url(img/bg-img/YourEverythingCoverArt.jpg);"></div>
+            <div class="hero-overlay"></div>
 
             <div class="container">
                 <div class="hero-slides-content text-center">
                     <h6>Latest Single</h6>
                     <h2>YOUR EVERYTHING</h2>
 
-                    <a href="https://open.spotify.com/track/4hNGYwcRzgpliOVijt6HEQ?si=e6e20730e4eb4659" class="btn oneMusic-btn mt-30">
-                        Listen on Spotify
-                    </a>
+                    <div class="hero-btns">
+                        <a href="https://open.spotify.com/track/4hNGYwcRzgpliOVijt6HEQ?si=e6e20730e4eb4659" class="btn oneMusic-btn">Listen Now</a>
+                    </div>
+
+                    <div class="stream-buttons mt-20">
+                        <a href="https://open.spotify.com/track/4hNGYwcRzgpliOVijt6HEQ?si=e6e20730e4eb4659">Spotify</a>
+                    </div>
                 </div>
             </div>
         </div>
@@ -78,61 +116,58 @@
         <!-- WAIT FOR ME -->
         <div class="single-hero-slide d-flex align-items-center justify-content-center">
             <div class="slide-img bg-img" style="background-image: url(img/bg-img/WaitForMeCoverArt.JPG);"></div>
+            <div class="hero-overlay"></div>
 
             <div class="container">
                 <div class="hero-slides-content text-center">
                     <h6>New Release</h6>
                     <h2>WAIT FOR ME</h2>
 
-                    <a href="https://open.spotify.com/track/67spze8p1rBDdjyHWgHvXc?si=b27d157193624a75" class="btn oneMusic-btn mt-30">
-                        Listen on Spotify
-                    </a>
+                    <div class="hero-btns">
+                        <a href="https://open.spotify.com/track/67spze8p1rBDdjyHWgHvXc?si=b27d157193624a75" class="btn oneMusic-btn">Listen Now</a>
+                    </div>
+
+                    <div class="stream-buttons mt-20">
+                        <a href="https://open.spotify.com/track/67spze8p1rBDdjyHWgHvXc?si=b27d157193624a75">Spotify</a>
+                    </div>
                 </div>
             </div>
         </div>
 
     </div>
-
 </section>
 
-<!-- ABOUT -->
 <section class="latest-albums-area section-padding-100">
-    <div class="container text-center">
+    <div class="container text-center about-box">
 
-        <h2>About Me</h2>
+        <h2 class="section-title">About Me</h2>
 
-        <div class="about-text mt-30">
+        <p>
+            After cutting his teeth as a lead guitarist and vocalist in Toronto, Canada’s, prominent, pop-punk scene,
+            Daniel Meschino has evolved into a singer-songwriter in his own right. Influenced by the likes of John Mayer,
+            Justin Bieber and Shawn Mendes, this Vaughan, Ontario, native has made great strides in his crusade to create pop music,
+            which is not only inspirational and motivational, but also authentic and relatable.
+        </p>
 
-            <p>
-                After cutting his teeth as a lead guitarist and vocalist in Toronto, Canada’s, prominent, pop-punk scene,
-                Daniel Meschino has evolved into a singer-songwriter in his own right. Influenced by the likes of John Mayer,
-                Justin Bieber and Shawn Mendes, this Vaughan, Ontario, native has made great strides in his crusade to create pop music,
-                which is not only inspirational and motivational, but also authentic and relatable.
-            </p>
+        <p>
+            Brought together through circumstances and luck, Meschino’s efforts culminated after a chance meeting with producer,
+            writer and drummer of Canadian rock band Finger Eleven, Steve Molella. Together, the pair spent the latter half of 2020
+            working on his EP, blending introspective lyrics with emotional vocals and upbeat instrumentals.
+        </p>
 
-            <p>
-                Brought together through circumstances and luck, Meschino’s efforts culminated after a chance meeting with producer,
-                writer and drummer of Canadian rock band Finger Eleven, Steve Molella. Together, they worked on his EP blending
-                introspective lyrics with emotional vocals and upbeat instrumentals.
-            </p>
-
-            <p>
-                His debut single “ALONE” showcases his smooth, soul-stirring falsetto and artistic range.
-            </p>
-
-        </div>
+        <p>
+            His debut single “ALONE” showcases his smooth, soul-stirring falsetto and artistic range.
+        </p>
 
     </div>
 </section>
 
-<!-- FOOTER -->
 <footer class="footer-area">
     <div class="container text-center">
         <p>© <script>document.write(new Date().getFullYear());</script> Daniel Meschino</p>
     </div>
 </footer>
 
-<!-- JS (DO NOT REMOVE - REQUIRED FOR SITE TO LOAD) -->
 <script src="js/jquery/jquery-2.2.4.min.js"></script>
 <script src="js/bootstrap/bootstrap.min.js"></script>
 <script src="js/plugins/plugins.js"></script>
