@@ -1,205 +1,149 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta charset="UTF-8">
+    <meta name="description" content="Daniel Meschino Music Artist Website">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-<title>Daniel Meschino</title>
+    <title>Daniel Meschino</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <!-- Favicon -->
+    <link rel="icon" href="img/core-img/favicon.ico">
 
-<style>
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Inter', sans-serif;
-    scroll-behavior: smooth;
-}
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="style.css">
 
-body {
-    background: #0b0b0f;
-    color: white;
-}
-
-/* HEADER */
-header {
-    position: fixed;
-    top: 0;
-    width: 100%;
-    padding: 18px 40px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background: rgba(0,0,0,0.55);
-    backdrop-filter: blur(12px);
-    z-index: 1000;
-}
-
-/* LOGO IMAGE */
-.logo img {
-    height: 30px;
-    width: auto;
-    display: block;
-}
-
-/* NAV */
-nav a {
-    margin-left: 20px;
-    color: white;
-    text-decoration: none;
-    opacity: 0.8;
-}
-
-nav a:hover {
-    opacity: 1;
-}
-
-/* HERO */
-.hero {
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-
-    /* ✅ FIXED PATH */
-    background: url("img/bg-img/YourEverythingCoverArt.JPG") center/cover no-repeat;
-
-    position: relative;
-}
-
-.hero::after {
-    content: "";
-    position: absolute;
-    inset: 0;
-    background: rgba(0,0,0,0.55);
-}
-
-.hero-content {
-    position: relative;
-    z-index: 2;
-}
-
-/* HERO IMAGE */
-.hero-content img {
-    width: 420px;
-    max-width: 80%;
-    margin-bottom: 15px;
-}
-
-/* SECTIONS */
-section {
-    padding: 100px 20px;
-    max-width: 1000px;
-    margin: auto;
-}
-
-h2 {
-    font-size: 32px;
-    margin-bottom: 20px;
-}
-
-/* MUSIC */
-.music-grid {
-    display: grid;
-    gap: 20px;
-}
-
-iframe {
-    width: 100%;
-    border-radius: 12px;
-}
-
-/* ABOUT */
-.about {
-    line-height: 1.7;
-    opacity: 0.9;
-}
-
-/* CONTACT */
-.socials a {
-    margin-right: 15px;
-    color: white;
-    text-decoration: none;
-    border-bottom: 1px solid rgba(255,255,255,0.4);
-}
-
-/* FOOTER */
-footer {
-    text-align: center;
-    padding: 40px;
-    opacity: 0.5;
-}
-</style>
+    <style>
+        .nav-brand {
+            color: #ffffff !important;
+            font-size: 28px;
+            font-weight: 700;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+        }
+    </style>
 </head>
 
 <body>
 
-<header>
-    <div class="logo">
-        <!-- ✅ FIXED PATH -->
-        <img src="img/bg-img/DanielMeschinoWhiteBG.JPG" alt="Logo">
-    </div>
+<!-- Preloader -->
+<div class="preloader d-flex align-items-center justify-content-center">
+    <div class="lds-ellipsis"><div></div><div></div><div></div><div></div></div>
+</div>
 
-    <nav>
-        <a href="#music">Music</a>
-        <a href="#about">About</a>
-        <a href="#contact">Contact</a>
-    </nav>
+<!-- Header -->
+<header class="header-area">
+    <div class="oneMusic-main-menu">
+        <div class="classy-nav-container breakpoint-off">
+            <div class="container">
+
+                <nav class="classy-navbar justify-content-between" id="oneMusicNav">
+
+                    <a href="index.html" class="nav-brand">DANIEL MESCHINO</a>
+
+                    <div class="classy-navbar-toggler">
+                        <span class="navbarToggler"><span></span><span></span><span></span></span>
+                    </div>
+
+                    <div class="classy-menu">
+                        <div class="classycloseIcon">
+                            <div class="cross-wrap"><span class="top"></span><span class="bottom"></span></div>
+                        </div>
+
+                        <div class="classynav">
+                            <ul>
+                                <li><a href="index.html">Home</a></li>
+                                <li><a href="music.html">Music</a></li>
+                                <li><a href="contact.html">Contact</a></li>
+                            </ul>
+
+                            <div class="login-register-cart-button d-flex align-items-center">
+                                <div class="login-register-btn mr-50">
+                                    <a href="login.html">Login / Register</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </nav>
+
+            </div>
+        </div>
+    </div>
 </header>
 
 <!-- HERO -->
-<div class="hero">
-    <div class="hero-content">
-        <!-- same image used as artist name -->
-        <img src="img/bg-img/DanielMeschinoWhiteBG.JPG" alt="Daniel Meschino">
-        <p>New music out now</p>
-    </div>
-</div>
+<section class="hero-area">
 
-<!-- MUSIC -->
-<section id="music">
-    <h2>Music</h2>
+    <div class="hero-slides owl-carousel">
 
-    <div class="music-grid">
+        <!-- YOUR EVERYTHING -->
+        <div class="single-hero-slide d-flex align-items-center justify-content-center">
+            <div class="slide-img bg-img" style="background-image: url(img/bg-img/YourEverythingCoverArt.jpg);"></div>
 
-        <iframe 
-        src="https://open.spotify.com/embed/track/placeholder" 
-        height="152" frameborder="0"></iframe>
+            <div class="container">
+                <div class="hero-slides-content text-center">
+                    <h6>Latest Single</h6>
+                    <h2>YOUR EVERYTHING <span>NEW MUSIC</span></h2>
+                    <a href="https://open.spotify.com/track/4hNGYwcRzgpliOVijt6HEQ?si=e6e20730e4eb4659"
+                       target="_blank"
+                       class="btn oneMusic-btn mt-50">Listen Now</a>
+                </div>
+            </div>
+        </div>
 
-        <iframe 
-        height="315" 
-        src="https://www.youtube.com/embed/VIDEO_ID" 
-        frameborder="0" allowfullscreen></iframe>
+        <!-- WAIT FOR ME -->
+        <div class="single-hero-slide d-flex align-items-center justify-content-center">
+            <div class="slide-img bg-img" style="background-image: url(img/bg-img/WaitForMeCoverArt.JPG);"></div>
+
+            <div class="container">
+                <div class="hero-slides-content text-center">
+                    <h6>New Release</h6>
+                    <h2>WAIT FOR ME <span>OUT NOW</span></h2>
+                    <a href="https://open.spotify.com/track/67spze8p1rBDdjyHWgHvXc?si=b27d157193624a75"
+                       target="_blank"
+                       class="btn oneMusic-btn mt-50">Listen Now</a>
+                </div>
+            </div>
+        </div>
 
     </div>
 </section>
 
 <!-- ABOUT -->
-<section id="about">
-    <h2>About</h2>
-    <div class="about">
-        <p>
-        Write your artist bio here. Keep it clean, emotional, and real.
+<section class="latest-albums-area section-padding-100">
+    <div class="container text-center">
+        <h2>About Me</h2>
+
+        <p style="max-width: 850px; margin: 30px auto; line-height: 1.7;">
+            After cutting his teeth as a lead guitarist and vocalist in Toronto’s pop-punk scene,
+            Daniel Meschino has evolved into a singer-songwriter in his own right.
+        </p>
+
+        <p style="max-width: 850px; margin: 30px auto; line-height: 1.7;">
+            Influenced by John Mayer, Justin Bieber, and Shawn Mendes, he creates emotional and relatable pop music.
+        </p>
+
+        <p style="max-width: 850px; margin: 30px auto; line-height: 1.7;">
+            His debut single “ALONE” showcases his smooth falsetto and growing artistry.
         </p>
     </div>
 </section>
 
-<!-- CONTACT -->
-<section id="contact">
-    <h2>Contact</h2>
-    <div class="socials">
-        <a href="#">Instagram</a>
-        <a href="#">TikTok</a>
-        <a href="#">YouTube</a>
-        <a href="mailto:you@email.com">Email</a>
+<!-- FOOTER -->
+<footer class="footer-area">
+    <div class="container text-center">
+        <p>© <script>document.write(new Date().getFullYear());</script> Daniel Meschino. All rights reserved.</p>
     </div>
-</section>
-
-<footer>
-    © 2026 Daniel Meschino. All rights reserved.
 </footer>
+
+<!-- JS -->
+<script src="js/jquery/jquery-2.2.4.min.js"></script>
+<script src="js/bootstrap/bootstrap.min.js"></script>
+<script src="js/plugins/plugins.js"></script>
+<script src="js/active.js"></script>
 
 </body>
 </html>
