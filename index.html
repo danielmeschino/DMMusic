@@ -17,13 +17,17 @@
 
     <style>
         html { scroll-behavior: smooth; }
-        body { overflow-x: hidden; background:#000; }
+        body { overflow-x: hidden; }
 
-        /* HEADER */
-        .header-area,
+        /* FIX HEADER */
+        .header-area {
+            position: absolute;
+            width: 100%;
+            z-index: 9999;
+        }
+
         .oneMusic-main-menu {
             background: transparent !important;
-            box-shadow: none !important;
         }
 
         .nav-brand {
@@ -31,48 +35,44 @@
             font-size: 28px;
             font-weight: 700;
             letter-spacing: 2px;
-            text-transform: uppercase;
-            display: block;
         }
 
         /* SOCIAL ICONS */
         .brand-wrapper {
-            text-align: left;
+            display: flex;
+            flex-direction: column;
         }
 
         .social-icons {
-            margin-top: 8px;
+            margin-top: 5px;
             display: flex;
-            gap: 14px;
+            gap: 12px;
         }
 
         .social-icons a {
             color: #fff;
-            font-size: 18px;
-            transition: 0.2s ease;
+            font-size: 16px;
         }
 
         .social-icons a:hover {
             opacity: 0.6;
-            transform: translateY(-2px);
         }
 
-        /* GENERAL */
-        section {
-            padding: 100px 0;
+        /* HERO TEXT WHITE */
+        .hero-slides-content,
+        .hero-slides-content h1,
+        .hero-slides-content h2,
+        .hero-slides-content h6,
+        .hero-slides-content span,
+        .hero-slides-content a {
+            color: #ffffff !important;
         }
+
+        section { padding: 100px 0; }
 
         .section-title {
             text-align: center;
             margin-bottom: 50px;
-            color: #fff;
-        }
-
-        p { color: #fff; }
-
-        /* HERO */
-        .hero-area * {
-            color: #fff !important;
         }
 
         /* MUSIC */
@@ -88,11 +88,6 @@
             overflow: hidden;
             text-align: center;
             padding-bottom: 15px;
-            transition: 0.25s;
-        }
-
-        .music-card:hover {
-            transform: translateY(-6px);
         }
 
         .music-card img {
@@ -126,41 +121,27 @@
             color: #fff !important;
         }
 
-        #mailing-list form,
-        #contact form {
-            display: flex;
-            justify-content: center;
-            gap: 10px;
-            flex-wrap: wrap;
-            max-width: 700px;
+        form {
+            max-width: 600px;
             margin: auto;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
         }
 
         input, textarea {
             padding: 12px;
             border-radius: 6px;
             border: none;
-            outline: none;
-            width: 100%;
-            max-width: 300px;
-        }
-
-        textarea {
-            max-width: 620px;
         }
 
         button {
-            padding: 12px 20px;
-            border: none;
-            border-radius: 6px;
+            padding: 12px;
             background: #fff;
             color: #000;
+            border: none;
+            border-radius: 6px;
             font-weight: bold;
-            cursor: pointer;
-        }
-
-        button:hover {
-            opacity: 0.85;
         }
     </style>
 </head>
@@ -175,28 +156,37 @@
 
                 <nav class="classy-navbar justify-content-between">
 
+                    <!-- NAME + SOCIAL -->
                     <div class="brand-wrapper">
-
                         <a href="#home" class="nav-brand">DANIEL MESCHINO</a>
 
                         <div class="social-icons">
-                            <a href="https://www.instagram.com/danielmeschino/" target="_blank">
-                                <i class="fa-brands fa-instagram"></i>
-                            </a>
+                            <a href="https://www.instagram.com/danielmeschino/" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+                            <a href="https://www.tiktok.com/@danielmeschino" target="_blank"><i class="fa-brands fa-tiktok"></i></a>
+                            <a href="https://open.spotify.com/artist/1FXqrUyXmmA65CgmDt3SDg" target="_blank"><i class="fa-brands fa-spotify"></i></a>
+                            <a href="https://www.youtube.com/@danielmeschino" target="_blank"><i class="fa-brands fa-youtube"></i></a>
+                        </div>
+                    </div>
 
-                            <a href="https://www.tiktok.com/@danielmeschino" target="_blank">
-                                <i class="fa-brands fa-tiktok"></i>
-                            </a>
+                    <!-- MENU -->
+                    <div class="classy-navbar-toggler">
+                        <span class="navbarToggler"><span></span><span></span><span></span></span>
+                    </div>
 
-                            <a href="https://open.spotify.com/artist/1FXqrUyXmmA65CgmDt3SDg" target="_blank">
-                                <i class="fa-brands fa-spotify"></i>
-                            </a>
-
-                            <a href="https://www.youtube.com/@danielmeschino" target="_blank">
-                                <i class="fa-brands fa-youtube"></i>
-                            </a>
+                    <div class="classy-menu">
+                        <div class="classycloseIcon">
+                            <div class="cross-wrap"><span></span><span></span></div>
                         </div>
 
+                        <div class="classynav">
+                            <ul>
+                                <li><a href="#home">Home</a></li>
+                                <li><a href="#music">Music</a></li>
+                                <li><a href="#about">About</a></li>
+                                <li><a href="#contact">Contact</a></li>
+                                <li><a href="#mailing-list">Mailing List</a></li>
+                            </ul>
+                        </div>
                     </div>
 
                 </nav>
@@ -206,20 +196,27 @@
     </div>
 </header>
 
-<!-- HERO -->
+<!-- HERO (RESTORED PROPERLY) -->
 <section id="home" class="hero-area">
 
-    <div class="container text-center">
+    <div class="single-hero-slide d-flex align-items-center justify-content-center">
 
-        <div style="padding:120px 20px;">
-            <h6 style="color:#fff;">Latest Release</h6>
-            <h2 style="color:#fff;">YOUR EVERYTHING</h2>
+        <div class="slide-img bg-img"
+             style="background-image: url(img/bg-img/YourEverythingCoverArt.jpg);"></div>
 
-            <a href="https://open.spotify.com/track/4hNGYwcRzgpliOVijt6HEQ?si=e6e20730e4eb4659"
-               target="_blank"
-               style="display:inline-block;margin-top:30px;padding:12px 22px;background:#fff;color:#000;border-radius:6px;font-weight:bold;text-decoration:none;">
-               Listen Now
-            </a>
+        <div class="container text-center">
+
+            <div class="hero-slides-content">
+                <h6>Latest Release</h6>
+                <h2>YOUR EVERYTHING</h2>
+
+                <a href="https://open.spotify.com/track/4hNGYwcRzgpliOVijt6HEQ"
+                   target="_blank"
+                   class="btn oneMusic-btn mt-50">
+                   Listen Now
+                </a>
+            </div>
+
         </div>
 
     </div>
@@ -229,7 +226,6 @@
 <!-- MUSIC -->
 <section id="music">
     <div class="container">
-
         <h2 class="section-title">Music</h2>
 
         <div class="music-grid">
@@ -237,92 +233,57 @@
             <div class="music-card">
                 <img src="img/bg-img/YourEverythingCoverArt.jpg">
                 <h5>Your Everything</h5>
-                <a href="https://open.spotify.com/track/4hNGYwcRzgpliOVijt6HEQ" target="_blank">Listen</a>
+                <a href="https://open.spotify.com/track/4hNGYwcRzgpliOVijt6HEQ">Listen</a>
             </div>
 
             <div class="music-card">
                 <img src="img/bg-img/WaitForMeCoverArt.JPG">
                 <h5>Wait For Me</h5>
-                <a href="https://open.spotify.com/track/67spze8p1rBDdjyHWgHvXc" target="_blank">Listen</a>
+                <a href="https://open.spotify.com/track/67spze8p1rBDdjyHWgHvXc">Listen</a>
             </div>
 
             <div class="music-card">
                 <img src="img/bg-img/ShakeCoverArt.JPG">
                 <h5>Shake</h5>
-                <a href="https://open.spotify.com/track/6I4TyovYNRmlBEb32UaPcb" target="_blank">Listen</a>
+                <a href="https://open.spotify.com/track/6I4TyovYNRmlBEb32UaPcb">Listen</a>
             </div>
 
             <div class="music-card">
                 <img src="img/bg-img/AloneCoverArt.jpg">
                 <h5>Alone</h5>
-                <a href="https://open.spotify.com/track/7LpdTIUenvzztjEUTq8S2F" target="_blank">Listen</a>
+                <a href="https://open.spotify.com/track/7LpdTIUenvzztjEUTq8S2F">Listen</a>
             </div>
 
         </div>
-
-    </div>
-</section>
-
-<!-- ABOUT -->
-<section id="about">
-    <div class="container text-center">
-        <h2 class="section-title">About</h2>
-
-        <p style="max-width:800px;margin:auto;line-height:1.8;">
-            After starting as a guitarist and vocalist in Toronto’s pop-punk scene,
-            Daniel Meschino has evolved into a singer-songwriter creating emotional pop music
-            influenced by John Mayer, Justin Bieber, and Shawn Mendes.
-        </p>
     </div>
 </section>
 
 <!-- CONTACT -->
 <section id="contact">
     <div class="container text-center">
-
         <h2 class="section-title">Contact</h2>
 
         <form action="https://formspree.io/f/mnjwpkgg" method="POST">
-
             <input type="text" name="name" placeholder="Your Name" required>
             <input type="email" name="email" placeholder="Your Email" required>
-
             <textarea name="message" rows="6" placeholder="Your Message" required></textarea>
-
             <button type="submit">Send Message</button>
-
         </form>
-
     </div>
 </section>
 
 <!-- MAILING LIST -->
 <section id="mailing-list">
     <div class="container text-center">
-
         <h2 class="section-title">Be First to Hear New Music</h2>
 
-        <p>Join the mailing list for updates & exclusive releases.</p>
-
         <form action="https://gmail.us3.list-manage.com/subscribe/post?u=c5b591f801cbd0c441c893b3a&id=c9f2a920a1"
-              method="post"
-              target="_blank">
-
+              method="post" target="_blank">
             <input type="email" name="EMAIL" placeholder="Enter your email" required>
-
             <button type="submit">Subscribe</button>
-
         </form>
-
     </div>
 </section>
-
-<!-- FOOTER -->
-<footer class="footer-area">
-    <div class="container text-center">
-        <p>© <script>document.write(new Date().getFullYear());</script> Daniel Meschino</p>
-    </div>
-</footer>
 
 </body>
 </html>
