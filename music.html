@@ -20,55 +20,6 @@
             letter-spacing: 2px;
             text-transform: uppercase;
         }
-
-        .music-section {
-            padding: 100px 0;
-        }
-
-        .music-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-            gap: 30px;
-        }
-
-        .music-card {
-            background: #111;
-            border-radius: 10px;
-            overflow: hidden;
-            text-align: center;
-            padding-bottom: 20px;
-            transition: transform 0.3s ease;
-        }
-
-        .music-card:hover {
-            transform: translateY(-5px);
-        }
-
-        .music-card img {
-            width: 100%;
-            height: 250px;
-            object-fit: cover;
-        }
-
-        .music-card h3 {
-            margin: 15px 0 5px;
-            color: #fff;
-        }
-
-        .music-card a {
-            display: inline-block;
-            margin-top: 10px;
-            padding: 10px 20px;
-            background: #fff;
-            color: #000;
-            border-radius: 5px;
-            text-decoration: none;
-            font-weight: bold;
-        }
-
-        .music-card a:hover {
-            opacity: 0.8;
-        }
     </style>
 </head>
 
@@ -79,7 +30,7 @@
     <div class="lds-ellipsis"><div></div><div></div><div></div><div></div></div>
 </div>
 
-<!-- Header (MATCHED TO YOUR THEME) -->
+<!-- HEADER (EXACT SAME AS HOMEPAGE) -->
 <header class="header-area">
     <div class="oneMusic-main-menu">
         <div class="classy-nav-container breakpoint-off">
@@ -122,46 +73,73 @@
     </div>
 </header>
 
-<!-- MUSIC SECTION -->
-<section class="music-section">
+<!-- TITLE SECTION (MATCHES SITE STYLE) -->
+<section class="breadcumb-area bg-img bg-overlay" style="background-image: url(img/bg-img/YourEverythingCoverArt.jpg); height: 300px;">
+    <div class="bradcumbContent text-center">
+        <h2>Music</h2>
+    </div>
+</section>
+
+<!-- MUSIC GRID (MATCHES YOUR THEME CONTAINER STYLE) -->
+<section class="latest-albums-area section-padding-100">
     <div class="container">
 
-        <div class="text-center mb-5">
-            <h2 style="color:white;">Music</h2>
-            <p style="color:#aaa;">Stream all releases below</p>
+        <div class="row">
+
+            <!-- SONG 1 -->
+            <div class="col-12 col-sm-6 col-md-3">
+                <div class="single-album-area">
+                    <img src="img/bg-img/YourEverythingCoverArt.jpg" alt="">
+                    <div class="album-info text-center">
+                        <h5>Your Everything</h5>
+                        <a href="https://open.spotify.com/track/4hNGYwcRzgpliOVijt6HEQ?si=e6e20730e4eb4659"
+                           target="_blank"
+                           class="btn oneMusic-btn mt-15">Listen</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- SONG 2 -->
+            <div class="col-12 col-sm-6 col-md-3">
+                <div class="single-album-area">
+                    <img src="img/bg-img/WaitForMeCoverArt.JPG" alt="">
+                    <div class="album-info text-center">
+                        <h5>Wait For Me</h5>
+                        <a href="https://open.spotify.com/track/67spze8p1rBDdjyHWgHvXc?si=b27d157193624a75"
+                           target="_blank"
+                           class="btn oneMusic-btn mt-15">Listen</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- SONG 3 -->
+            <div class="col-12 col-sm-6 col-md-3">
+                <div class="single-album-area">
+                    <img src="img/bg-img/AloneCoverArt.JPG" alt="">
+                    <div class="album-info text-center">
+                        <h5>Alone</h5>
+                        <a href="https://open.spotify.com/track/7LpdTIUenvzztjEUTq8S2F?si=f71e1ca86a3641be"
+                           target="_blank"
+                           class="btn oneMusic-btn mt-15">Listen</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- SONG 4 -->
+            <div class="col-12 col-sm-6 col-md-3">
+                <div class="single-album-area">
+                    <img src="img/bg-img/ShakeCoverArt.JPG" alt="">
+                    <div class="album-info text-center">
+                        <h5>Shake</h5>
+                        <a href="https://open.spotify.com/track/6I4TyovYNRmlBEb32UaPcb?si=d12cc87f24b74b58"
+                           target="_blank"
+                           class="btn oneMusic-btn mt-15">Listen</a>
+                    </div>
+                </div>
+            </div>
+
         </div>
 
-        <div class="music-grid">
-
-            <!-- YOUR EVERYTHING -->
-            <div class="music-card">
-                <img src="img/bg-img/YourEverythingCoverArt.jpg" alt="">
-                <h3>Your Everything</h3>
-                <a href="https://open.spotify.com/track/4hNGYwcRzgpliOVijt6HEQ?si=e6e20730e4eb4659" target="_blank">Listen</a>
-            </div>
-
-            <!-- WAIT FOR ME -->
-            <div class="music-card">
-                <img src="img/bg-img/WaitForMeCoverArt.JPG" alt="">
-                <h3>Wait For Me</h3>
-                <a href="https://open.spotify.com/track/67spze8p1rBDdjyHWgHvXc?si=b27d157193624a75" target="_blank">Listen</a>
-            </div>
-
-            <!-- ALONE -->
-            <div class="music-card">
-                <img src="img/bg-img/AloneCoverArt.JPG" alt="">
-                <h3>Alone</h3>
-                <a href="https://open.spotify.com/track/7LpdTIUenvzztjEUTq8S2F?si=f71e1ca86a3641be" target="_blank">Listen</a>
-            </div>
-
-            <!-- SHAKE -->
-            <div class="music-card">
-                <img src="img/bg-img/ShakeCoverArt.JPG" alt="">
-                <h3>Shake</h3>
-                <a href="https://open.spotify.com/track/6I4TyovYNRmlBEb32UaPcb?si=d12cc87f24b74b58" target="_blank">Listen</a>
-            </div>
-
-        </div>
     </div>
 </section>
 
