@@ -20,9 +20,7 @@
             overflow-x: hidden;
         }
 
-        /* =========================
-           FIX HEADER WHITE BAR
-        ========================== */
+        /* FIX HEADER WHITE BAR */
         .header-area {
             position: absolute;
             width: 100%;
@@ -33,9 +31,7 @@
             background: transparent !important;
         }
 
-        /* =========================
-           FIX HERO TEXT COLOR
-        ========================== */
+        /* FORCE HERO TEXT WHITE */
         .hero-slides-content,
         .hero-slides-content h1,
         .hero-slides-content h2,
@@ -45,9 +41,6 @@
             color: #ffffff !important;
         }
 
-        /* =========================
-           BRAND TEXT
-        ========================== */
         .nav-brand {
             color: #ffffff !important;
             font-size: 28px;
@@ -65,9 +58,6 @@
             margin-bottom: 50px;
         }
 
-        /* =========================
-           MUSIC GRID
-        ========================== */
         .music-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
@@ -79,7 +69,7 @@
             border-radius: 10px;
             overflow: hidden;
             text-align: center;
-            padding-bottom: 20px;
+            padding-bottom: 15px;
         }
 
         .music-card img {
@@ -89,7 +79,7 @@
         }
 
         .music-card h5 {
-            margin: 15px 0;
+            margin: 15px 0 10px;
             color: #fff;
         }
 
@@ -101,6 +91,7 @@
             border-radius: 5px;
             font-weight: bold;
             text-decoration: none;
+            margin-bottom: 10px;
         }
 
         .music-card a:hover {
@@ -109,6 +100,7 @@
 
         iframe {
             margin-top: 10px;
+            border-radius: 12px;
         }
     </style>
 </head>
@@ -120,7 +112,7 @@
     <div class="lds-ellipsis"><div></div><div></div><div></div><div></div></div>
 </div>
 
-<!-- HEADER (UNCHANGED STRUCTURE) -->
+<!-- HEADER -->
 <header class="header-area">
     <div class="oneMusic-main-menu">
         <div class="classy-nav-container breakpoint-off">
@@ -170,17 +162,14 @@
         <div class="container text-center">
 
             <div class="hero-slides-content">
-
                 <h6>Latest Release</h6>
                 <h2>YOUR EVERYTHING</h2>
 
-                <!-- KEEP YOUR ORIGINAL BUTTON -->
                 <a href="https://open.spotify.com/track/4hNGYwcRzgpliOVijt6HEQ?si=e6e20730e4eb4659"
                    target="_blank"
                    class="btn oneMusic-btn mt-50">
                    Listen Now
                 </a>
-
             </div>
 
         </div>
@@ -197,44 +186,50 @@
 
         <div class="music-grid">
 
+            <!-- YOUR EVERYTHING -->
             <div class="music-card">
                 <img src="img/bg-img/YourEverythingCoverArt.jpg">
                 <h5>Your Everything</h5>
                 <a href="https://open.spotify.com/track/4hNGYwcRzgpliOVijt6HEQ?si=e6e20730e4eb4659" target="_blank">Listen</a>
+
+                <iframe src="https://open.spotify.com/embed/track/4hNGYwcRzgpliOVijt6HEQ"
+                    width="100%" height="80" frameborder="0"
+                    allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture">
+                </iframe>
             </div>
 
+            <!-- WAIT FOR ME -->
             <div class="music-card">
                 <img src="img/bg-img/WaitForMeCoverArt.JPG">
                 <h5>Wait For Me</h5>
                 <a href="https://open.spotify.com/track/67spze8p1rBDdjyHWgHvXc?si=b27d157193624a75" target="_blank">Listen</a>
+
+                <iframe src="https://open.spotify.com/embed/track/67spze8p1rBDdjyHWgHvXc"
+                    width="100%" height="80" frameborder="0"
+                    allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture">
+                </iframe>
             </div>
 
+            <!-- SHAKE -->
             <div class="music-card">
                 <img src="img/bg-img/ShakeCoverArt.JPG">
                 <h5>Shake</h5>
                 <a href="https://open.spotify.com/track/6I4TyovYNRmlBEb32UaPcb?si=d12cc87f24b74b58" target="_blank">Listen</a>
 
-                <!-- SPOTIFY EMBED (ONLY IN MUSIC SECTION) -->
-                <iframe style="border-radius:12px"
-                    src="https://open.spotify.com/embed/track/6I4TyovYNRmlBEb32UaPcb"
-                    width="100%"
-                    height="80"
-                    frameborder="0"
+                <iframe src="https://open.spotify.com/embed/track/6I4TyovYNRmlBEb32UaPcb"
+                    width="100%" height="80" frameborder="0"
                     allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture">
                 </iframe>
             </div>
 
+            <!-- ALONE -->
             <div class="music-card">
                 <img src="img/bg-img/AloneCoverArt.jpg">
                 <h5>Alone</h5>
                 <a href="https://open.spotify.com/track/7LpdTIUenvzztjEUTq8S2F?si=f71e1ca86a3641be" target="_blank">Listen</a>
 
-                <!-- SPOTIFY EMBED -->
-                <iframe style="border-radius:12px"
-                    src="https://open.spotify.com/embed/track/7LpdTIUenvzztjEUTq8S2F"
-                    width="100%"
-                    height="80"
-                    frameborder="0"
+                <iframe src="https://open.spotify.com/embed/track/7LpdTIUenvzztjEUTq8S2F"
+                    width="100%" height="80" frameborder="0"
                     allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture">
                 </iframe>
             </div>
