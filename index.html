@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="description" content="Daniel Meschino Official Website">
+    <meta name="description" content="Daniel Meschino Music Artist Website">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>Daniel Meschino</title>
@@ -18,23 +18,24 @@
 
         .nav-brand {
             color: #fff !important;
-            font-size: 26px;
+            font-size: 28px;
             font-weight: 700;
             letter-spacing: 2px;
             text-transform: uppercase;
-        }
-
-        .classynav ul li a {
-            cursor: pointer;
         }
 
         section {
             padding: 100px 0;
         }
 
+        .section-title {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
         .music-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
             gap: 30px;
         }
 
@@ -48,7 +49,7 @@
 
         .music-card img {
             width: 100%;
-            height: 250px;
+            height: 240px;
             object-fit: cover;
         }
 
@@ -70,28 +71,35 @@
         .music-card a:hover {
             opacity: 0.8;
         }
-
-        .section-title {
-            text-align: center;
-            margin-bottom: 50px;
-            color: #fff;
-        }
     </style>
 </head>
 
 <body>
 
-<!-- HEADER -->
+<!-- PRELOADER -->
+<div class="preloader d-flex align-items-center justify-content-center">
+    <div class="lds-ellipsis"><div></div><div></div><div></div><div></div></div>
+</div>
+
+<!-- HEADER (YOUR ORIGINAL THEME) -->
 <header class="header-area">
     <div class="oneMusic-main-menu">
         <div class="classy-nav-container breakpoint-off">
             <div class="container">
 
-                <nav class="classy-navbar justify-content-between">
+                <nav class="classy-navbar justify-content-between" id="oneMusicNav">
 
-                    <a class="nav-brand">DANIEL MESCHINO</a>
+                    <a href="#home" class="nav-brand">DANIEL MESCHINO</a>
+
+                    <div class="classy-navbar-toggler">
+                        <span class="navbarToggler"><span></span><span></span><span></span></span>
+                    </div>
 
                     <div class="classy-menu">
+                        <div class="classycloseIcon">
+                            <div class="cross-wrap"><span class="top"></span><span class="bottom"></span></div>
+                        </div>
+
                         <div class="classynav">
                             <ul>
                                 <li><a href="#home">Home</a></li>
@@ -113,7 +121,8 @@
 <section id="home" class="hero-area">
 
     <div class="single-hero-slide d-flex align-items-center justify-content-center">
-        <div class="slide-img bg-img" style="background-image: url(img/bg-img/YourEverythingCoverArt.jpg);"></div>
+        <div class="slide-img bg-img"
+             style="background-image: url(img/bg-img/YourEverythingCoverArt.jpg);"></div>
 
         <div class="container text-center">
             <h6>Latest Release</h6>
@@ -167,9 +176,9 @@
         <h2 class="section-title">About</h2>
 
         <p style="max-width:800px;margin:auto;line-height:1.8;">
-            After developing his craft as a guitarist and vocalist in Toronto’s pop-punk scene,
-            Daniel Meschino has evolved into a singer-songwriter creating emotional and relatable pop music.
-            Influenced by John Mayer, Justin Bieber, and Shawn Mendes, his sound blends storytelling with modern production.
+            After starting as a guitarist and vocalist in Toronto’s pop-punk scene,
+            Daniel Meschino has grown into a modern singer-songwriter blending emotional storytelling
+            with clean pop production. Influenced by John Mayer, Justin Bieber, and Shawn Mendes.
         </p>
     </div>
 </section>
@@ -178,7 +187,6 @@
 <section id="contact">
     <div class="container text-center">
         <h2 class="section-title">Contact</h2>
-
         <p>Email: your-email@example.com</p>
     </div>
 </section>
@@ -189,6 +197,12 @@
         <p>© <script>document.write(new Date().getFullYear());</script> Daniel Meschino</p>
     </div>
 </footer>
+
+<!-- JS -->
+<script src="js/jquery/jquery-2.2.4.min.js"></script>
+<script src="js/bootstrap/bootstrap.min.js"></script>
+<script src="js/plugins/plugins.js"></script>
+<script src="js/active.js"></script>
 
 </body>
 </html>
