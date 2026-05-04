@@ -3,67 +3,102 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="description" content="Daniel Meschino Music Artist Website">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Daniel Meschino Official Website">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>Daniel Meschino</title>
 
-    <!-- Favicon -->
     <link rel="icon" href="img/core-img/favicon.ico">
-
-    <!-- Stylesheet -->
     <link rel="stylesheet" href="style.css">
 
     <style>
+        html {
+            scroll-behavior: smooth;
+        }
+
         .nav-brand {
-            color: #ffffff !important;
-            font-size: 28px;
+            color: #fff !important;
+            font-size: 26px;
             font-weight: 700;
             letter-spacing: 2px;
             text-transform: uppercase;
+        }
+
+        .classynav ul li a {
+            cursor: pointer;
+        }
+
+        section {
+            padding: 100px 0;
+        }
+
+        .music-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 30px;
+        }
+
+        .music-card {
+            background: #111;
+            border-radius: 10px;
+            overflow: hidden;
+            text-align: center;
+            padding-bottom: 20px;
+        }
+
+        .music-card img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+        }
+
+        .music-card h5 {
+            margin: 15px 0;
+            color: #fff;
+        }
+
+        .music-card a {
+            display: inline-block;
+            padding: 10px 18px;
+            background: #fff;
+            color: #000;
+            border-radius: 5px;
+            font-weight: bold;
+            text-decoration: none;
+        }
+
+        .music-card a:hover {
+            opacity: 0.8;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 50px;
+            color: #fff;
         }
     </style>
 </head>
 
 <body>
 
-<!-- Preloader -->
-<div class="preloader d-flex align-items-center justify-content-center">
-    <div class="lds-ellipsis"><div></div><div></div><div></div><div></div></div>
-</div>
-
-<!-- Header -->
+<!-- HEADER -->
 <header class="header-area">
     <div class="oneMusic-main-menu">
         <div class="classy-nav-container breakpoint-off">
             <div class="container">
 
-                <nav class="classy-navbar justify-content-between" id="oneMusicNav">
+                <nav class="classy-navbar justify-content-between">
 
-                    <a href="index.html" class="nav-brand">DANIEL MESCHINO</a>
-
-                    <div class="classy-navbar-toggler">
-                        <span class="navbarToggler"><span></span><span></span><span></span></span>
-                    </div>
+                    <a class="nav-brand">DANIEL MESCHINO</a>
 
                     <div class="classy-menu">
-                        <div class="classycloseIcon">
-                            <div class="cross-wrap"><span class="top"></span><span class="bottom"></span></div>
-                        </div>
-
                         <div class="classynav">
                             <ul>
-                                <li><a href="index.html">Home</a></li>
-                                <li><a href="music.html">Music</a></li>
-                                <li><a href="contact.html">Contact</a></li>
+                                <li><a href="#home">Home</a></li>
+                                <li><a href="#music">Music</a></li>
+                                <li><a href="#about">About</a></li>
+                                <li><a href="#contact">Contact</a></li>
                             </ul>
-
-                            <div class="login-register-cart-button d-flex align-items-center">
-                                <div class="login-register-btn mr-50">
-                                    <a href="login.html">Login / Register</a>
-                                </div>
-                            </div>
                         </div>
                     </div>
 
@@ -75,75 +110,85 @@
 </header>
 
 <!-- HERO -->
-<section class="hero-area">
+<section id="home" class="hero-area">
 
-    <div class="hero-slides owl-carousel">
+    <div class="single-hero-slide d-flex align-items-center justify-content-center">
+        <div class="slide-img bg-img" style="background-image: url(img/bg-img/YourEverythingCoverArt.jpg);"></div>
 
-        <!-- YOUR EVERYTHING -->
-        <div class="single-hero-slide d-flex align-items-center justify-content-center">
-            <div class="slide-img bg-img" style="background-image: url(img/bg-img/YourEverythingCoverArt.jpg);"></div>
-
-            <div class="container">
-                <div class="hero-slides-content text-center">
-                    <h6>Latest Single</h6>
-                    <h2>YOUR EVERYTHING <span>NEW MUSIC</span></h2>
-                    <a href="https://open.spotify.com/track/4hNGYwcRzgpliOVijt6HEQ?si=e6e20730e4eb4659"
-                       target="_blank"
-                       class="btn oneMusic-btn mt-50">Listen Now</a>
-                </div>
-            </div>
+        <div class="container text-center">
+            <h6>Latest Release</h6>
+            <h2>YOUR EVERYTHING</h2>
+            <a href="https://open.spotify.com/track/4hNGYwcRzgpliOVijt6HEQ?si=e6e20730e4eb4659"
+               target="_blank"
+               class="btn oneMusic-btn mt-50">Listen Now</a>
         </div>
+    </div>
 
-        <!-- WAIT FOR ME -->
-        <div class="single-hero-slide d-flex align-items-center justify-content-center">
-            <div class="slide-img bg-img" style="background-image: url(img/bg-img/WaitForMeCoverArt.JPG);"></div>
+</section>
 
-            <div class="container">
-                <div class="hero-slides-content text-center">
-                    <h6>New Release</h6>
-                    <h2>WAIT FOR ME <span>OUT NOW</span></h2>
-                    <a href="https://open.spotify.com/track/67spze8p1rBDdjyHWgHvXc?si=b27d157193624a75"
-                       target="_blank"
-                       class="btn oneMusic-btn mt-50">Listen Now</a>
-                </div>
+<!-- MUSIC -->
+<section id="music">
+    <div class="container">
+        <h2 class="section-title">Music</h2>
+
+        <div class="music-grid">
+
+            <div class="music-card">
+                <img src="img/bg-img/YourEverythingCoverArt.jpg">
+                <h5>Your Everything</h5>
+                <a href="https://open.spotify.com/track/4hNGYwcRzgpliOVijt6HEQ?si=e6e20730e4eb4659" target="_blank">Listen</a>
             </div>
-        </div>
 
+            <div class="music-card">
+                <img src="img/bg-img/WaitForMeCoverArt.JPG">
+                <h5>Wait For Me</h5>
+                <a href="https://open.spotify.com/track/67spze8p1rBDdjyHWgHvXc?si=b27d157193624a75" target="_blank">Listen</a>
+            </div>
+
+            <div class="music-card">
+                <img src="img/bg-img/ShakeCoverArt.JPG">
+                <h5>Shake</h5>
+                <a href="https://open.spotify.com/track/6I4TyovYNRmlBEb32UaPcb?si=d12cc87f24b74b58" target="_blank">Listen</a>
+            </div>
+
+            <div class="music-card">
+                <img src="img/bg-img/AloneCoverArt.jpg">
+                <h5>Alone</h5>
+                <a href="https://open.spotify.com/track/7LpdTIUenvzztjEUTq8S2F?si=f71e1ca86a3641be" target="_blank">Listen</a>
+            </div>
+
+        </div>
     </div>
 </section>
 
 <!-- ABOUT -->
-<section class="latest-albums-area section-padding-100">
+<section id="about">
     <div class="container text-center">
-        <h2>About Me</h2>
+        <h2 class="section-title">About</h2>
 
-        <p style="max-width: 850px; margin: 30px auto; line-height: 1.7;">
-            After cutting his teeth as a lead guitarist and vocalist in Toronto’s pop-punk scene,
-            Daniel Meschino has evolved into a singer-songwriter in his own right.
+        <p style="max-width:800px;margin:auto;line-height:1.8;">
+            After developing his craft as a guitarist and vocalist in Toronto’s pop-punk scene,
+            Daniel Meschino has evolved into a singer-songwriter creating emotional and relatable pop music.
+            Influenced by John Mayer, Justin Bieber, and Shawn Mendes, his sound blends storytelling with modern production.
         </p>
+    </div>
+</section>
 
-        <p style="max-width: 850px; margin: 30px auto; line-height: 1.7;">
-            Influenced by John Mayer, Justin Bieber, and Shawn Mendes, he creates emotional and relatable pop music.
-        </p>
+<!-- CONTACT -->
+<section id="contact">
+    <div class="container text-center">
+        <h2 class="section-title">Contact</h2>
 
-        <p style="max-width: 850px; margin: 30px auto; line-height: 1.7;">
-            His debut single “ALONE” showcases his smooth falsetto and growing artistry.
-        </p>
+        <p>Email: your-email@example.com</p>
     </div>
 </section>
 
 <!-- FOOTER -->
 <footer class="footer-area">
     <div class="container text-center">
-        <p>© <script>document.write(new Date().getFullYear());</script> Daniel Meschino. All rights reserved.</p>
+        <p>© <script>document.write(new Date().getFullYear());</script> Daniel Meschino</p>
     </div>
 </footer>
-
-<!-- JS -->
-<script src="js/jquery/jquery-2.2.4.min.js"></script>
-<script src="js/bootstrap/bootstrap.min.js"></script>
-<script src="js/plugins/plugins.js"></script>
-<script src="js/active.js"></script>
 
 </body>
 </html>
