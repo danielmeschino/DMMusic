@@ -20,7 +20,7 @@
             overflow-x: hidden;
         }
 
-        /* FIX WHITE BAR ISSUE */
+        /* FIX HEADER OVERLAY ISSUE */
         .header-area {
             position: absolute;
             width: 100%;
@@ -31,8 +31,18 @@
             background: transparent !important;
         }
 
+        /* 🔥 FIX HERO TEXT TURNING BLACK */
+        .hero-slides-content,
+        .hero-slides-content h1,
+        .hero-slides-content h2,
+        .hero-slides-content h6,
+        .hero-slides-content span,
+        .hero-slides-content a {
+            color: #ffffff !important;
+        }
+
         .nav-brand {
-            color: #fff !important;
+            color: #ffffff !important;
             font-size: 28px;
             font-weight: 700;
             letter-spacing: 2px;
@@ -149,26 +159,28 @@
 
         <div class="container text-center">
 
-            <h6>Latest Release</h6>
-            <h2>YOUR EVERYTHING</h2>
+            <div class="hero-slides-content">
+                <h6>Latest Release</h6>
+                <h2>YOUR EVERYTHING</h2>
 
-            <!-- SPOTIFY EMBED -->
-            <iframe style="border-radius:12px"
-                src="https://open.spotify.com/embed/track/4hNGYwcRzgpliOVijt6HEQ"
-                width="320"
-                height="80"
-                frameborder="0"
-                allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture">
-            </iframe>
+                <!-- SPOTIFY EMBED -->
+                <iframe style="border-radius:12px"
+                    src="https://open.spotify.com/embed/track/4hNGYwcRzgpliOVijt6HEQ"
+                    width="320"
+                    height="80"
+                    frameborder="0"
+                    allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture">
+                </iframe>
 
-            <!-- SECOND FEATURE -->
-            <iframe style="border-radius:12px"
-                src="https://open.spotify.com/embed/track/67spze8p1rBDdjyHWgHvXc"
-                width="320"
-                height="80"
-                frameborder="0"
-                allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture">
-            </iframe>
+                <iframe style="border-radius:12px"
+                    src="https://open.spotify.com/embed/track/67spze8p1rBDdjyHWgHvXc"
+                    width="320"
+                    height="80"
+                    frameborder="0"
+                    allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture">
+                </iframe>
+
+            </div>
 
         </div>
 
