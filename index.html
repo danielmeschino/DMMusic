@@ -11,7 +11,7 @@
     <link rel="icon" href="img/core-img/favicon.ico">
     <link rel="stylesheet" href="style.css">
 
-    <!-- FONT AWESOME ICONS -->
+    <!-- ICONS -->
     <link rel="stylesheet"
           href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
@@ -63,7 +63,9 @@
             color: #fff !important;
         }
 
-        section { padding: 100px 0; }
+        section {
+            padding: 100px 0;
+        }
 
         .section-title {
             text-align: center;
@@ -117,6 +119,21 @@
         }
 
         p { color: #fff; }
+
+        /* MAILING LIST */
+        #mailing-list {
+            background: #0a0a0a;
+        }
+
+        #mailing-list input {
+            outline: none;
+        }
+
+        #mailing-list button:hover {
+            opacity: 0.85;
+            transform: translateY(-2px);
+            transition: 0.2s ease;
+        }
     </style>
 </head>
 
@@ -130,7 +147,7 @@
 
                 <nav class="classy-navbar justify-content-between">
 
-                    <!-- ARTIST NAME + SOCIALS -->
+                    <!-- NAME + SOCIAL -->
                     <div class="brand-wrapper">
                         <a href="#home" class="nav-brand">DANIEL MESCHINO</a>
 
@@ -169,6 +186,7 @@
                                 <li><a href="#music">Music</a></li>
                                 <li><a href="#about">About</a></li>
                                 <li><a href="#contact">Contact</a></li>
+                                <li><a href="#mailing-list">Mailing List</a></li>
                             </ul>
                         </div>
 
@@ -263,6 +281,37 @@
     <div class="container text-center">
         <h2 class="section-title">Contact</h2>
         <p>Email: your-email@example.com</p>
+    </div>
+</section>
+
+<!-- MAILING LIST -->
+<section id="mailing-list">
+    <div class="container text-center">
+
+        <h2 class="section-title">Be First to Hear New Music</h2>
+
+        <p style="max-width:600px;margin:auto;margin-bottom:25px;">
+            Join the mailing list for updates, releases, and exclusive content.
+        </p>
+
+        <form action="https://gmail.us3.list-manage.com/subscribe/post?u=c5b591f801cbd0c441c893b3a&id=c9f2a920a1"
+              method="post"
+              target="_blank"
+              style="display:flex;justify-content:center;gap:10px;flex-wrap:wrap;">
+
+            <input type="email"
+                   name="EMAIL"
+                   placeholder="Enter your email"
+                   required
+                   style="padding:12px 15px;border-radius:6px;border:none;min-width:260px;">
+
+            <button type="submit"
+                    style="padding:12px 20px;border:none;border-radius:6px;background:#fff;color:#000;font-weight:bold;cursor:pointer;">
+                Subscribe
+            </button>
+
+        </form>
+
     </div>
 </section>
 
